@@ -10,6 +10,7 @@ All colors MUST be HSL.
   :root {
     --background: 150 29% 10%;
     --foreground: 0 0% 100%;
+    --gradient-radial: radial-gradient(circle at 50% 30%, hsl(150 28% 18%), hsl(150 29% 10%));
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
