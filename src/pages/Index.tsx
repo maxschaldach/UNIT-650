@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 const Index = () => {
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center overflow-hidden pt-8" style={{ background: 'var(--gradient-radial)' }}>
-      <Link to="/" className="block hover:opacity-80 transition-opacity">
-        <img 
-          src={logo} 
-          alt="Logo" 
-          className="absolute top-8 w-12 h-auto md:w-10 lg:w-12" 
-          style={{ filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))' }}
-        />
-      </Link>
+      <img 
+        src={logo} 
+        alt="Logo" 
+        className="absolute top-8 w-12 h-auto md:w-10 lg:w-12" 
+        style={{ filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))' }}
+      />
       <h1 
         className="font-formula text-foreground text-7xl md:text-7xl lg:text-8xl font-black tracking-normal animate-breathe animate-fade-in px-4 text-center leading-[0.9] md:leading-normal max-w-[90%]"
         style={{ filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))', transform: 'scaleY(1.33)' }}
