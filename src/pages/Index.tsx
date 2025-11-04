@@ -16,20 +16,20 @@ const Index = () => {
         Building for Freedom?
       </h1>
       
-      <nav className="absolute bottom-8 flex gap-8 text-sm md:text-base font-formula font-light">
-        <a href="#" className="text-white opacity-100 hover:opacity-90 transition-opacity">
+      <nav className="absolute bottom-8 flex gap-8 text-xs md:text-sm font-formula font-light">
+        <a href="#" className="text-white opacity-100 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Home
         </a>
-        <a href="#about" className="text-white opacity-70 hover:opacity-90 transition-opacity">
+        <a href="#about" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           About
         </a>
-        <a href="#thesis" className="text-white opacity-70 hover:opacity-90 transition-opacity">
+        <a href="#thesis" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Thesis
         </a>
-        <a href="#portfolio" className="text-white opacity-70 hover:opacity-90 transition-opacity">
+        <a href="#portfolio" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Portfolio
         </a>
-        <a href="#team" className="text-white opacity-70 hover:opacity-90 transition-opacity">
+        <a href="#team" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Team
         </a>
       </nav>
