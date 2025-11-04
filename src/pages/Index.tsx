@@ -16,6 +16,17 @@ const Index = () => {
         Building for Freedom?
       </h1>
       
+      <div 
+        className="mt-8 px-8 py-4 border-2 border-white rounded-2xl font-formula font-medium text-white text-lg md:text-xl"
+        style={{ 
+          filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))',
+          transform: 'scaleY(1.33)',
+          display: 'inline-block'
+        }}
+      >
+        Get your first check
+      </div>
+      
       <nav className="absolute bottom-12 flex gap-6 text-[10px] md:text-xs font-formula font-light">
         <a href="#" className="text-white opacity-100 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Home
