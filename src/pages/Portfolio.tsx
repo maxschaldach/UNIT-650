@@ -1,4 +1,8 @@
 import logoAbout from "@/assets/logo-about.svg";
+import arrowLeft from "@/assets/arrow-left.svg";
+import arrowRight from "@/assets/arrow-right.svg";
+import berkeleyLogo from "@/assets/berkeley-logo.svg";
+import washuLogo from "@/assets/washu-logo.svg";
 import { Link } from "react-router-dom";
 
 const Portfolio = () => {
@@ -12,20 +16,70 @@ const Portfolio = () => {
         />
       </div>
       
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full">
-        <p 
-          className="font-formula font-light text-base md:text-base lg:text-lg text-center animate-fade-in"
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full flex flex-col items-center gap-8">
+        {/* Category box */}
+        <div 
+          className="px-4 py-2 border animate-fade-in"
           style={{ 
-            color: '#142318',
-            transform: 'scaleY(1.33)',
-            lineHeight: '1.4',
-            maxWidth: '90%',
-            width: '100%',
-            margin: '0 auto'
+            borderColor: '#142318',
+            opacity: 0.3
           }}
         >
-          Portfolio content goes here.
-        </p>
+          <span 
+            className="font-formula font-light text-xs"
+            style={{ 
+              color: '#142318',
+              transform: 'scaleY(1.33)',
+              display: 'inline-block'
+            }}
+          >
+            Chips
+          </span>
+        </div>
+
+        {/* Main content with arrows */}
+        <div className="flex items-center gap-8 md:gap-12 w-full max-w-4xl">
+          <img 
+            src={arrowLeft} 
+            alt="Previous" 
+            className="w-6 h-auto flex-shrink-0 animate-fade-in cursor-pointer hover:opacity-10 transition-opacity"
+            style={{ opacity: 0.05 }}
+          />
+          
+          <p 
+            className="font-formula font-light text-base md:text-base lg:text-lg text-center animate-fade-in flex-1"
+            style={{ 
+              color: '#142318',
+              transform: 'scaleY(1.33)',
+              lineHeight: '1.4'
+            }}
+          >
+            Next-generation algorithms for a new area in chip design
+          </p>
+          
+          <img 
+            src={arrowRight} 
+            alt="Next" 
+            className="w-6 h-auto flex-shrink-0 animate-fade-in cursor-pointer hover:opacity-10 transition-opacity"
+            style={{ opacity: 0.05 }}
+          />
+        </div>
+
+        {/* University logos */}
+        <div className="flex items-center justify-center gap-8 animate-fade-in">
+          <img 
+            src={berkeleyLogo} 
+            alt="Berkeley" 
+            className="h-8 w-auto"
+            style={{ opacity: 0.15 }}
+          />
+          <img 
+            src={washuLogo} 
+            alt="WashU" 
+            className="h-8 w-auto"
+            style={{ opacity: 0.15 }}
+          />
+        </div>
       </div>
       
       <nav className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-6 text-xs md:text-xs font-formula font-light">
