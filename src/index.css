@@ -1,3 +1,25 @@
+@font-face {
+  font-family: 'PPFormula';
+  src: url('/fonts/PPFormula-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PPFormula';
+  src: url('/fonts/PPFormula-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Optional italic example */
+@font-face {
+  font-family: 'PPFormula';
+  src: url('/fonts/PPFormula-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
