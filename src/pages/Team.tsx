@@ -3,26 +3,31 @@ import { Link } from "react-router-dom";
 
 const Team = () => {
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center overflow-hidden pt-8" style={{ background: 'var(--gradient-radial-light)' }}>
-      <img 
-        src={logoAbout} 
-        alt="Logo" 
-        className="absolute top-8 w-12 h-auto md:w-10 lg:w-12" 
-      />
-      <p 
-        className="font-formula font-light text-base md:text-base lg:text-lg text-center px-8 animate-fade-in"
-        style={{ 
-          color: '#142318',
-          transform: 'scaleY(1.33)',
-          lineHeight: '1.4',
-          maxWidth: '90%',
-          width: '100%'
-        }}
-      >
-        UNIT 650 was born at Stanford and is powered by a European entrepreneur and investor in Spotify, Coinbase, and Revolut.
-      </p>
+    <div className="fixed inset-0 flex flex-col items-center overflow-hidden" style={{ background: 'var(--gradient-radial-light)' }}>
+      <div className="pt-8 pb-4">
+        <img 
+          src={logoAbout} 
+          alt="Logo" 
+          className="w-12 h-auto md:w-10 lg:w-12" 
+        />
+      </div>
       
-      <nav className="absolute bottom-12 flex gap-6 text-xs md:text-xs font-formula font-light">
+      <div className="flex-1 flex items-center justify-center px-8">
+        <p 
+          className="font-formula font-light text-base md:text-base lg:text-lg text-center animate-fade-in"
+          style={{ 
+            color: '#142318',
+            transform: 'scaleY(1.33)',
+            lineHeight: '1.4',
+            maxWidth: '90%',
+            width: '100%'
+          }}
+        >
+          UNIT 650 was born at Stanford and is powered by a European entrepreneur and investor in Spotify, Coinbase, and Revolut.
+        </p>
+      </div>
+      
+      <nav className="pb-12 flex gap-6 text-xs md:text-xs font-formula font-light">
         <Link to="/" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 hover:scale-110 transition-all duration-200">
           Home
         </Link>
