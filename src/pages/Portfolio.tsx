@@ -16,7 +16,7 @@ const Portfolio = () => {
       </div>
 
       {/* Chips box - positioned above center */}
-      <div className="absolute top-[calc(50%-90px)] md:top-[calc(50%-75px)] left-1/2 -translate-x-1/2">
+      <div className="absolute top-[calc(50%-90px)] left-1/2 -translate-x-1/2">
         <div
           className="px-6 py-1 border rounded-full animate-fade-in-muted"
           style={{
@@ -65,7 +65,7 @@ const Portfolio = () => {
       />
 
       {/* University logos - positioned below center */}
-      <div className="absolute top-[calc(50%+60px)] md:top-[calc(50%+50px)] left-1/2 -translate-x-1/2">
+      <div className="absolute top-[calc(50%+60px)] left-1/2 -translate-x-1/2">
         <div className="flex items-center justify-center gap-8 md:gap-16 animate-fade-in-soft">
           <img src={berkeleyLogo} alt="Berkeley" className="h-6 w-auto" />
           <img src={washuLogo} alt="WashU" className="h-6 w-auto" />
