@@ -42,7 +42,7 @@ All colors MUST be HSL.
 
     /* ✅ Updated gradient definition */
     --gradient-radial: radial-gradient(
-      circle 50vmax at 50% 40%,
+      circle 45vmax at 50% 40%,
       /* larger circle, pushed higher */ #1d3d28 0%,
       /* bright center */ #1c3a26 55%,
       /* holds brightness longer */ #162a1c 75%,
