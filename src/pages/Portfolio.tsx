@@ -134,7 +134,7 @@ const Portfolio = () => {
       </div>
 
       {/* Main text - positioned identically to other pages */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-12 md:px-8 w-full max-w-4xl">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-16 md:px-8 w-full max-w-4xl">
         <p
           className={`font-formula font-light text-base md:text-base lg:text-lg text-center ${
             isInitialLoad 
