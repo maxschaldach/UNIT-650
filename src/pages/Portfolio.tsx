@@ -49,9 +49,13 @@ const Portfolio = () => {
       const newIndex = (prev + 1) % portfolioCompanies.length;
       
       setTimeout(() => {
-        // Update display AND start fade-in together
+        // First: Update content while still at opacity 0
         setDisplayIndex(newIndex);
-        setIsTransitioning(false);
+        
+        // Second: After a micro-delay, start the fade-in
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 20);
       }, 700);
       
       return newIndex;
@@ -65,9 +69,13 @@ const Portfolio = () => {
       const newIndex = (prev - 1 + portfolioCompanies.length) % portfolioCompanies.length;
       
       setTimeout(() => {
-        // Update display AND start fade-in together
+        // First: Update content while still at opacity 0
         setDisplayIndex(newIndex);
-        setIsTransitioning(false);
+        
+        // Second: After a micro-delay, start the fade-in
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 20);
       }, 700);
       
       return newIndex;
