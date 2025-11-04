@@ -10,7 +10,7 @@ const Index = () => {
         style={{ filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))' }}
       />
       <h1 
-        className="font-formula text-foreground text-6xl md:text-8xl lg:text-9xl font-black tracking-normal"
+        className="font-formula text-foreground text-5xl md:text-7xl lg:text-8xl font-black tracking-normal"
         style={{ filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))', transform: 'scaleY(1.33)', display: 'inline-block' }}
       >
         Building for Freedom?
@@ -19,7 +19,7 @@ const Index = () => {
       <div 
         className="mt-20 px-20 py-1 border border-white rounded-2xl font-formula font-medium text-white text-xs md:text-sm"
         style={{ 
-          transform: 'scale(1.05) scaleY(1.33)',
+          transform: 'scale(0.85) scaleY(1.33)',
           display: 'inline-block',
           paddingTop: '0.3rem'
         }}
