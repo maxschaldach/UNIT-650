@@ -5,11 +5,13 @@ const Team = () => {
   return (
     <div className="fixed inset-0 flex flex-col items-center overflow-hidden" style={{ background: 'var(--gradient-radial-light)' }}>
       <div className="absolute top-8 left-1/2 -translate-x-1/2">
-        <img 
-          src={logoAbout} 
-          alt="Logo" 
-          className="w-12 h-auto md:w-10 lg:w-12" 
-        />
+        <Link to="/" className="block hover:opacity-80 transition-opacity">
+          <img 
+            src={logoAbout} 
+            alt="Logo" 
+            className="w-12 h-auto md:w-10 lg:w-12" 
+          />
+        </Link>
       </div>
       
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full">
