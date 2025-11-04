@@ -28,7 +28,7 @@ const Index = () => {
           display: 'inline-block',
           paddingTop: '0.4rem',
           background: 'transparent',
-          boxShadow: '0 0 8px rgba(255, 255, 255, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.3)',
+          boxShadow: '0 0 6px rgba(255, 255, 255, 0.5), inset 0 0 6px rgba(255, 255, 255, 0.3)',
           animationDelay: '0.4s',
           opacity: 0,
           animationFillMode: 'forwards'
