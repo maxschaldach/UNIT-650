@@ -39,9 +39,11 @@ All colors MUST be HSL.
   :root {
     --background: 150 29% 10%;
     --foreground: 0 0% 100%;
-    --gradient-radial: radial-gradient(ellipse 140% 80% at 50% 0%, 
-      hsl(150 30% 16%) 0%, 
-      hsl(150 26% 11%) 100%);
+    --gradient-radial: radial-gradient(circle at center, 
+      hsl(150 35% 18%) 0%, 
+      hsl(150 34% 17%) 39%,
+      hsl(150 35% 14%) 78%,
+      hsl(150 30% 11%) 100%);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
