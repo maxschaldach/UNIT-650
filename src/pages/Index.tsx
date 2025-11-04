@@ -28,7 +28,7 @@ const Index = () => {
           paddingTop: '0.4rem',
           filter: 'drop-shadow(0 0 0px rgba(255, 255, 255, 0))',
           transition: 'filter 0.4s ease-in-out',
-          animationDelay: '0.2s',
+          animationDelay: '0.4s',
           opacity: 0,
           animationFillMode: 'forwards'
         }}
