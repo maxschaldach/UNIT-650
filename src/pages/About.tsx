@@ -10,7 +10,7 @@ const About = () => {
         className="absolute top-8 w-8 h-auto md:w-10 lg:w-12" 
       />
       <p 
-        className="font-formula font-light text-sm md:text-base lg:text-lg text-center px-8"
+        className="font-formula font-light text-sm md:text-base lg:text-lg text-center px-8 animate-fade-in"
         style={{ 
           color: '#142318',
           transform: 'scaleY(1.33)',
