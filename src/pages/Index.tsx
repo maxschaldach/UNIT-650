@@ -36,7 +36,7 @@ const Index = () => {
         <a href="#" className="text-white opacity-100 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Home
         </a>
-        <a href="#about" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
+        <a href="/about" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           About
         </a>
         <a href="#thesis" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
