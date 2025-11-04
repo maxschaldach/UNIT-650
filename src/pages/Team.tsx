@@ -8,7 +8,7 @@ const Team = () => {
         <img 
           src={logoAbout} 
           alt="Logo" 
-          className="w-12 h-auto md:w-10 lg:w-12" 
+          className="w-10 h-auto md:w-10 lg:w-12" 
         />
       </div>
       
