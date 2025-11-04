@@ -42,11 +42,11 @@ All colors MUST be HSL.
 
     /* ✅ Updated gradient definition */
     --gradient-radial: radial-gradient(
-      circle at 50% 45%, /* circular, slightly above center */
-      hsl(150 35% 18%) 0%, 
-      hsl(150 34% 17%) 39%,
-      hsl(150 35% 14%) 78%,
-      hsl(150 30% 11%) 100%
+      circle 140vmax at 50% 35%, /* shifted upward for top highlight */
+      hsl(150 35% 22%) 0%,      /* brighter center */
+      hsl(150 33% 17%) 35%,     /* mid transition */
+      hsl(150 32% 13%) 70%,     /* darker outer zone */
+      hsl(150 30% 10%) 100%     /* deep edges */
     );
 
     /* About page gradient - light theme */
@@ -128,6 +128,6 @@ All colors MUST be HSL.
     background-image: var(--gradient-radial);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 80% 120%; /* narrower horizontally, extends vertically */
+    background-size: cover; /* narrower horizontally, extends vertically */
   }
 }
