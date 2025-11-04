@@ -53,7 +53,7 @@ const Portfolio = () => {
               lineHeight: "1.4",
             }}
           >
-            Next-generation algorithms for a new area in chip design
+            Next-generation algorithms for a new era in chip design
           </p>
 
           <img
