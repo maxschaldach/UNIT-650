@@ -181,7 +181,7 @@ const Portfolio = () => {
             }`}
           >
             {company.logos.map((logo, logoIndex) => (
-              <img key={logoIndex} src={logo.src} alt={logo.alt} className={`${logo.size} w-auto`} />
+              <img key={logoIndex} src={logo.src} alt={logo.alt} className="w-auto" style={{ height: '24px' }} />
             ))}
           </div>
         ))}
