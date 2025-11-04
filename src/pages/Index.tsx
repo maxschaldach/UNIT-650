@@ -27,17 +27,17 @@ const Index = () => {
         rel="noopener noreferrer"
         onMouseEnter={() => setIsButtonHovered(true)}
         onMouseLeave={() => setIsButtonHovered(false)}
-        className="mt-16 px-14 py-1 border border-white font-formula font-medium text-white text-sm md:text-sm cursor-pointer transition-transform duration-300 active:scale-95"
+        className="mt-16 px-14 py-1 border border-white font-formula font-medium text-white text-sm md:text-sm cursor-pointer transition-transform duration-300 active:scale-95 animate-fade-in opacity-0"
         style={{
           borderRadius: '14px',
-          transform: `scale(${isButtonHovered ? 0.98 : 0.95}) scaleY(1.33)`,
+          transform: `scale(${isButtonHovered ? 0.98 : 0.95}) scaleY(1.33) translateZ(0)`,
           display: 'inline-block',
           paddingTop: '0.4rem',
           background: 'transparent',
           boxShadow: '0 0 5px rgba(255, 255, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.3)',
-          animation: 'fade-in 1.5s ease-out forwards',
           animationDelay: '0.4s',
-          opacity: 0
+          willChange: 'transform, opacity',
+          backfaceVisibility: 'hidden'
         }}
       >
         Get your first check
