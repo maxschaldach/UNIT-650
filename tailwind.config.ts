@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        'formula': ['Space Grotesk', 'sans-serif'],
+        'formula': ['PPFormula', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
