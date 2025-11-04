@@ -21,8 +21,8 @@ const portfolioCompanies = [
     label: "Chips",
     text: "Novel chip architecture for the parallel future of computation",
     logos: [
-      { src: ethZurichLogo, alt: "ETH Zurich", size: "h-5" },
-      { src: tumLogo, alt: "TUM", size: "h-5" },
+      { src: ethZurichLogo, alt: "ETH Zurich", size: "h-6" },
+      { src: tumLogo, alt: "TUM", size: "h-6" },
     ],
   },
 ];
