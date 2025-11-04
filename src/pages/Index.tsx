@@ -45,7 +45,7 @@ const Index = () => {
         <a href="#portfolio" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Portfolio
         </a>
-        <a href="#team" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
+        <a href="/team" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Team
         </a>
       </nav>

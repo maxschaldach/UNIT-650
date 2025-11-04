@@ -34,7 +34,7 @@ const About = () => {
         <a href="#portfolio" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
           Portfolio
         </a>
-        <a href="#team" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
+        <a href="/team" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
           Team
         </a>
       </nav>
