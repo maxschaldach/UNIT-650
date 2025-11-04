@@ -11,7 +11,7 @@ const Index = () => {
         style={{ filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))' }}
       />
       <h1 
-        className="font-formula text-foreground text-6xl md:text-7xl lg:text-8xl font-black tracking-normal"
+        className="font-formula text-foreground text-6xl md:text-7xl lg:text-8xl font-black tracking-normal animate-breathe"
         style={{ filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))', transform: 'scaleY(1.33)', display: 'inline-block' }}
       >
         Building for Freedom?
