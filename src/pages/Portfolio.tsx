@@ -7,10 +7,10 @@ const Portfolio = () => {
       <img 
         src={logoAbout} 
         alt="Logo" 
-        className="absolute top-8 w-8 h-auto md:w-10 lg:w-12" 
+        className="absolute top-8 w-12 h-auto md:w-10 lg:w-12" 
       />
       <p 
-        className="font-formula font-light text-sm md:text-base lg:text-lg text-center px-8 animate-fade-in"
+        className="font-formula font-light text-base md:text-base lg:text-lg text-center px-8 animate-fade-in"
         style={{ 
           color: '#142318',
           transform: 'scaleY(1.33)',
@@ -22,7 +22,7 @@ const Portfolio = () => {
         Portfolio content goes here.
       </p>
       
-      <nav className="absolute bottom-12 flex gap-6 text-[10px] md:text-xs font-formula font-light">
+      <nav className="absolute bottom-12 flex gap-6 text-xs md:text-xs font-formula font-light">
         <Link to="/" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 hover:scale-110 transition-all duration-200">
           Home
         </Link>

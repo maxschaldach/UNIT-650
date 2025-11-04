@@ -7,11 +7,11 @@ const Index = () => {
       <img 
         src={logo} 
         alt="Logo" 
-        className="absolute top-8 w-8 h-auto md:w-10 lg:w-12" 
+        className="absolute top-8 w-12 h-auto md:w-10 lg:w-12" 
         style={{ filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))' }}
       />
       <h1 
-        className="font-formula text-foreground text-6xl md:text-7xl lg:text-8xl font-black tracking-normal animate-breathe animate-fade-in"
+        className="font-formula text-foreground text-7xl md:text-7xl lg:text-8xl font-black tracking-normal animate-breathe animate-fade-in px-4"
         style={{ filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))', transform: 'scaleY(1.33)', display: 'inline-block' }}
       >
         Building for Freedom?
@@ -21,7 +21,7 @@ const Index = () => {
         href="https://www.linkedin.com/in/max-schaldach/"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-16 px-20 py-1 border border-white rounded-2xl font-formula font-medium text-white text-xs md:text-sm cursor-pointer animate-fade-in"
+        className="mt-16 px-20 py-1 border border-white rounded-2xl font-formula font-medium text-white text-sm md:text-sm cursor-pointer animate-fade-in"
         style={{ 
           transform: 'scale(0.95) scaleY(1.33)',
           display: 'inline-block',
@@ -38,7 +38,7 @@ const Index = () => {
         Get your first check
       </a>
       
-      <nav className="absolute bottom-12 flex gap-6 text-[10px] md:text-xs font-formula font-light">
+      <nav className="absolute bottom-12 flex gap-6 text-xs md:text-xs font-formula font-light">
         <Link to="/" className="text-white opacity-100 hover:opacity-90 hover:scale-110 transition-all duration-200" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Home
         </Link>
