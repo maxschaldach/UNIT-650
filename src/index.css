@@ -40,15 +40,14 @@ All colors MUST be HSL.
     --background: 150 29% 10%;
     --foreground: 0 0% 100%;
 
-    /* 🔽 Update this section */
+    /* ✅ Updated gradient definition */
     --gradient-radial: radial-gradient(
-      circle 120vmax at 50% 50%, /* stays circular, extends vertically */
+      circle at 50% 45%, /* circular, slightly above center */
       hsl(150 35% 18%) 0%, 
       hsl(150 34% 17%) 39%,
       hsl(150 35% 14%) 78%,
       hsl(150 30% 11%) 100%
     );
-    /* 🔼 */
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -81,28 +80,20 @@ All colors MUST be HSL.
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -123,6 +114,13 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+
+    /* ✅ Apply gradient as background */
+    background-color: hsl(var(--background));
+    background-image: var(--gradient-radial);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 80% 120%; /* narrower horizontally, extends vertically */
   }
 }
