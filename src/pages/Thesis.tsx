@@ -19,7 +19,7 @@ const Thesis = () => {
           width: '100%'
         }}
       >
-        Freedom is a function of technological independence.
+        Our freedom is a function of our technological independence.
       </p>
       
       <nav className="absolute bottom-12 flex gap-6 text-[10px] md:text-xs font-formula font-light">
