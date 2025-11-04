@@ -17,12 +17,12 @@ const Index = () => {
       </h1>
       
       <div 
-        className="mt-8 px-12 py-1 border border-white rounded-full font-formula font-medium text-white text-sm md:text-base"
+        className="mt-16 px-16 py-1 border border-white rounded-full font-formula font-medium text-white text-xs md:text-sm"
         style={{ 
           filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))',
           transform: 'scaleY(1.33)',
           display: 'inline-block',
-          paddingTop: '0.35rem'
+          paddingTop: '0.3rem'
         }}
       >
         Get your first check
