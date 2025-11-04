@@ -13,8 +13,8 @@ const portfolioCompanies = [
     label: "Chips",
     text: "Next-generation algorithms for a new era in chip design",
     logos: [
-      { src: berkeleyLogo, alt: "Berkeley", size: "h-6" },
-      { src: washuLogo, alt: "WashU", size: "h-6" },
+      { src: berkeleyLogo, alt: "Berkeley", size: "h-5" },
+      { src: washuLogo, alt: "WashU", size: "h-5" },
     ],
   },
   {
