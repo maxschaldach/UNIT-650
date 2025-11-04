@@ -41,7 +41,7 @@ const Portfolio = () => {
           <img
             src={arrowLeft}
             alt="Previous"
-            className="w-4 h-auto flex-shrink-0 self-center cursor-pointer hover:opacity-10 transition-opacity"
+            className="w-4 h-auto flex-shrink-0 self-center animate-fade-in cursor-pointer hover:opacity-10 transition-opacity"
             style={{ opacity: 0.05 }}
           />
 
@@ -59,7 +59,7 @@ const Portfolio = () => {
           <img
             src={arrowRight}
             alt="Next"
-            className="w-4 h-auto flex-shrink-0 self-center cursor-pointer hover:opacity-10 transition-opacity"
+            className="w-4 h-auto flex-shrink-0 self-center animate-fade-in cursor-pointer hover:opacity-10 transition-opacity"
             style={{ opacity: 0.05 }}
           />
         </div>
