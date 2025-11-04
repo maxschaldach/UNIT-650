@@ -45,9 +45,11 @@ const Portfolio = () => {
 
   const handleNext = () => {
     setIsTransitioning(true);
+    const newIndex = (currentIndex + 1) % portfolioCompanies.length;
+    setCurrentIndex(newIndex);
+    
     setTimeout(() => {
-      const newIndex = (currentIndex + 1) % portfolioCompanies.length;
-      setCurrentIndex(newIndex);
+      // Update display AFTER fade-out completes
       setDisplayIndex(newIndex);
       setTimeout(() => {
         setIsTransitioning(false);
@@ -58,9 +60,11 @@ const Portfolio = () => {
 
   const handlePrevious = () => {
     setIsTransitioning(true);
+    const newIndex = (currentIndex - 1 + portfolioCompanies.length) % portfolioCompanies.length;
+    setCurrentIndex(newIndex);
+    
     setTimeout(() => {
-      const newIndex = (currentIndex - 1 + portfolioCompanies.length) % portfolioCompanies.length;
-      setCurrentIndex(newIndex);
+      // Update display AFTER fade-out completes
       setDisplayIndex(newIndex);
       setTimeout(() => {
         setIsTransitioning(false);
@@ -100,7 +104,7 @@ const Portfolio = () => {
           className={`px-6 py-1 border rounded-full ${
             isInitialLoad 
               ? "animate-fade-in-muted" 
-              : `transition-opacity duration-700 ${isTransitioning ? "opacity-0" : "opacity-100"}`
+              : `transition-opacity duration-700 ${isTransitioning ? "opacity-0" : "opacity-30"}`
           }`}
           style={{
             borderColor: "#142318",
@@ -158,7 +162,7 @@ const Portfolio = () => {
         <div className={`flex items-center justify-center gap-8 md:gap-16 ${
           isInitialLoad 
             ? "animate-fade-in-soft" 
-            : `transition-opacity duration-700 ${isTransitioning ? "opacity-0" : "opacity-100"}`
+            : `transition-opacity duration-700 ${isTransitioning ? "opacity-0" : "opacity-20"}`
         }`}>
           {currentCompany.logos.map((logo, index) => (
             <img key={index} src={logo.src} alt={logo.alt} className={`${logo.size} w-auto`} />
