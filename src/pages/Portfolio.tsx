@@ -13,15 +13,15 @@ const portfolioCompanies = [
     label: "Chips",
     text: "Next-generation algorithms for a new era in chip design",
     logos: [
-      { src: berkeleyLogo, alt: "Berkeley", size: "h-5" },
-      { src: washuLogo, alt: "WashU", size: "h-5" },
+      { src: berkeleyLogo, alt: "Berkeley", size: "h-14" },
+      { src: washuLogo, alt: "WashU", size: "h-11" },
     ],
   },
   {
     label: "Chips",
     text: "Novel chip architecture for the parallel future of computation",
     logos: [
-      { src: ethZurichLogo, alt: "ETH Zurich", size: "h-5" },
+      { src: ethZurichLogo, alt: "ETH Zurich", size: "h-16" },
       { src: tumLogo, alt: "TUM", size: "h-5" },
     ],
   },
