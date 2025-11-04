@@ -29,6 +29,7 @@ const portfolioCompanies = [
 
 const Portfolio = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [displayIndex, setDisplayIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -44,19 +45,41 @@ const Portfolio = () => {
 
   const handleNext = () => {
     setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % portfolioCompanies.length);
-      setIsTransitioning(false);
-    }, 700);
+    setCurrentIndex((prev) => {
+      const newIndex = (prev + 1) % portfolioCompanies.length;
+      
+      setTimeout(() => {
+        // First: Update content while still at opacity 0
+        setDisplayIndex(newIndex);
+        
+        // Second: After a micro-delay, start the fade-in
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 20);
+      }, 700);
+      
+      return newIndex;
+    });
     resetTimer();
   };
 
   const handlePrevious = () => {
     setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev - 1 + portfolioCompanies.length) % portfolioCompanies.length);
-      setIsTransitioning(false);
-    }, 700);
+    setCurrentIndex((prev) => {
+      const newIndex = (prev - 1 + portfolioCompanies.length) % portfolioCompanies.length;
+      
+      setTimeout(() => {
+        // First: Update content while still at opacity 0
+        setDisplayIndex(newIndex);
+        
+        // Second: After a micro-delay, start the fade-in
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 20);
+      }, 700);
+      
+      return newIndex;
+    });
     resetTimer();
   };
 
@@ -74,6 +97,8 @@ const Portfolio = () => {
     };
   }, []);
 
+  const currentCompany = portfolioCompanies[displayIndex];
+
   return (
     <div
       className="fixed inset-0 flex flex-col items-center overflow-hidden"
@@ -83,57 +108,47 @@ const Portfolio = () => {
         <img src={logoAbout} alt="Logo" className="w-12 h-auto md:w-10 lg:w-12" />
       </div>
 
-      {/* Pre-render all companies - Label boxes */}
+      {/* Label box - positioned above center */}
       <div className="absolute top-[calc(50%-90px)] md:top-[calc(50%-75px)] left-1/2 -translate-x-1/2">
-        {portfolioCompanies.map((company, index) => (
-          <div
-            key={`label-${index}`}
-            className={`absolute top-0 left-1/2 -translate-x-1/2 px-6 py-1 border rounded-full transition-opacity duration-700 ${
-              isInitialLoad && index === 0
-                ? "animate-fade-in-muted"
-                : currentIndex === index && !isTransitioning
-                ? "opacity-30"
-                : "opacity-0 pointer-events-none"
-            }`}
-            style={{
-              borderColor: "#142318",
-            }}
-          >
-            <span
-              className="font-formula font-light text-xs"
-              style={{
-                color: "#142318",
-                transform: "scaleY(1.33)",
-                display: "inline-block",
-              }}
-            >
-              {company.label}
-            </span>
-          </div>
-        ))}
-      </div>
-
-      {/* Pre-render all companies - Main text */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full max-w-4xl">
-        {portfolioCompanies.map((company, index) => (
-          <p
-            key={`text-${index}`}
-            className={`absolute top-0 left-0 right-0 font-formula font-light text-base md:text-base lg:text-lg text-center transition-opacity duration-700 ${
-              isInitialLoad && index === 0
-                ? "animate-fade-in"
-                : currentIndex === index && !isTransitioning
-                ? "opacity-100"
-                : "opacity-0 pointer-events-none"
-            }`}
+        <div
+          className={`px-6 py-1 border rounded-full ${
+            isInitialLoad 
+              ? "animate-fade-in-muted" 
+              : `transition-opacity duration-700 ${isTransitioning ? "opacity-0" : "opacity-30"}`
+          }`}
+          style={{
+            borderColor: "#142318",
+          }}
+        >
+          <span
+            className="font-formula font-light text-xs"
             style={{
               color: "#142318",
               transform: "scaleY(1.33)",
-              lineHeight: "1.4",
+              display: "inline-block",
             }}
           >
-            {company.text}
-          </p>
-        ))}
+            {currentCompany.label}
+          </span>
+        </div>
+      </div>
+
+      {/* Main text - positioned identically to other pages */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full max-w-4xl">
+        <p
+          className={`font-formula font-light text-base md:text-base lg:text-lg text-center ${
+            isInitialLoad 
+              ? "animate-fade-in" 
+              : `transition-opacity duration-700 ${isTransitioning ? "opacity-0" : "opacity-100"}`
+          }`}
+          style={{
+            color: "#142318",
+            transform: "scaleY(1.33)",
+            lineHeight: "1.4",
+          }}
+        >
+          {currentCompany.text}
+        </p>
       </div>
 
       {/* Left arrow - positioned at center left */}
@@ -152,24 +167,17 @@ const Portfolio = () => {
         className="absolute top-[calc(50%-3px)] -translate-y-1/2 right-8 w-4 h-auto opacity-80 animate-fade-in-subtle cursor-pointer hover:opacity-90 transition-opacity"
       />
 
-      {/* Pre-render all companies - University logos */}
+      {/* University logos - positioned below center */}
       <div className="absolute top-[calc(50%+60px)] md:top-[calc(50%+50px)] left-1/2 -translate-x-1/2">
-        {portfolioCompanies.map((company, index) => (
-          <div
-            key={`logos-${index}`}
-            className={`absolute top-0 left-1/2 -translate-x-1/2 flex items-center justify-center gap-8 md:gap-16 transition-opacity duration-700 ${
-              isInitialLoad && index === 0
-                ? "animate-fade-in-soft"
-                : currentIndex === index && !isTransitioning
-                ? "opacity-20"
-                : "opacity-0 pointer-events-none"
-            }`}
-          >
-            {company.logos.map((logo, logoIndex) => (
-              <img key={logoIndex} src={logo.src} alt={logo.alt} className={`${logo.size} w-auto`} />
-            ))}
-          </div>
-        ))}
+        <div className={`flex items-center justify-center gap-8 md:gap-16 ${
+          isInitialLoad 
+            ? "animate-fade-in-soft" 
+            : `transition-opacity duration-700 ${isTransitioning ? "opacity-0" : "opacity-20"}`
+        }`}>
+          {currentCompany.logos.map((logo, index) => (
+            <img key={index} src={logo.src} alt={logo.alt} className={`${logo.size} w-auto`} />
+          ))}
+        </div>
       </div>
 
       <nav className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-6 text-xs md:text-xs font-formula font-light">
