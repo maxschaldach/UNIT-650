@@ -9,8 +9,11 @@ const Index = () => {
         className="absolute top-8 w-10 h-auto md:w-12 lg:w-16" 
         style={{ filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))' }}
       />
-      <h1 className="font-formula text-foreground text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight">
-        Rewriting the World?
+      <h1 
+        className="font-formula text-foreground text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight"
+        style={{ filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))' }}
+      >
+        Building for Freedom?
       </h1>
     </div>
   );
