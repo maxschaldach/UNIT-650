@@ -169,15 +169,22 @@ const Portfolio = () => {
 
       {/* University logos - positioned below center */}
       <div className="absolute top-[calc(50%+60px)] md:top-[calc(50%+50px)] left-1/2 -translate-x-1/2">
-        <div className={`flex items-center justify-center gap-8 md:gap-16 ${
-          isInitialLoad 
-            ? "animate-fade-in-soft" 
-            : `transition-opacity duration-700 ${isTransitioning ? "opacity-0" : "opacity-20"}`
-        }`}>
-          {currentCompany.logos.map((logo, index) => (
-            <img key={index} src={logo.src} alt={logo.alt} className={`${logo.size} w-auto`} />
-          ))}
-        </div>
+        {portfolioCompanies.map((company, companyIndex) => (
+          <div 
+            key={companyIndex}
+            className={`flex items-center justify-center gap-8 md:gap-16 absolute top-0 left-1/2 -translate-x-1/2 transition-opacity duration-700 ${
+              isInitialLoad && companyIndex === 0
+                ? "animate-fade-in-soft"
+                : displayIndex === companyIndex && !isInitialLoad
+                ? isTransitioning ? "opacity-0" : "opacity-20"
+                : "opacity-0 pointer-events-none"
+            }`}
+          >
+            {company.logos.map((logo, logoIndex) => (
+              <img key={logoIndex} src={logo.src} alt={logo.alt} className={`${logo.size} w-auto`} />
+            ))}
+          </div>
+        ))}
       </div>
 
       <nav className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-6 text-xs md:text-xs font-formula font-light">
