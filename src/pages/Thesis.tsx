@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Thesis = () => {
   return (
     <div className="fixed inset-0 flex flex-col items-center overflow-hidden" style={{ background: 'var(--gradient-radial-light)' }}>
-      <div className="pt-8 pb-4">
+      <div className="pt-8">
         <img 
           src={logoAbout} 
           alt="Logo" 
@@ -12,7 +12,7 @@ const Thesis = () => {
         />
       </div>
       
-      <div className="flex-1 flex items-center justify-center px-8 pb-16">
+      <div className="flex-1 flex items-center justify-center px-8" style={{ marginBottom: '3rem' }}>
         <p 
           className="font-formula font-light text-base md:text-base lg:text-lg text-center animate-fade-in"
           style={{ 
