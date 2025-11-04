@@ -37,11 +37,11 @@ const Portfolio = () => {
         </div>
 
         {/* Main content with arrows */}
-        <div className="flex items-center gap-1 md:gap-2 w-full max-w-4xl">
+        <div className="flex items-center gap-1 w-full max-w-4xl">
           <img
             src={arrowLeft}
             alt="Previous"
-            className="w-4 h-auto flex-shrink-0 animate-fade-in cursor-pointer hover:opacity-10 transition-opacity"
+            className="w-4 h-auto flex-shrink-0 self-center cursor-pointer hover:opacity-10 transition-opacity"
             style={{ opacity: 0.05 }}
           />
 
@@ -59,13 +59,13 @@ const Portfolio = () => {
           <img
             src={arrowRight}
             alt="Next"
-            className="w-4 h-auto flex-shrink-0 animate-fade-in cursor-pointer hover:opacity-10 transition-opacity"
+            className="w-4 h-auto flex-shrink-0 self-center cursor-pointer hover:opacity-10 transition-opacity"
             style={{ opacity: 0.05 }}
           />
         </div>
 
         {/* University logos */}
-        <div className="flex items-center justify-center gap-16 animate-fade-in">
+        <div className="flex items-center justify-center gap-8 md:gap-16 animate-fade-in">
           <img src={berkeleyLogo} alt="Berkeley" className="h-6 w-auto" style={{ opacity: 0.2 }} />
           <img src={washuLogo} alt="WashU" className="h-6 w-auto" style={{ opacity: 0.2 }} />
         </div>
