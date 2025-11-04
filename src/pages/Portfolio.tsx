@@ -18,10 +18,9 @@ const Portfolio = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full flex flex-col items-center gap-8">
         {/* Category box */}
         <div
-          className="px-6 py-1 border rounded-full animate-fade-in"
+          className="px-6 py-1 border rounded-full animate-fade-in-muted"
           style={{
             borderColor: "#142318",
-            opacity: 0.3,
           }}
         >
           <span
@@ -41,8 +40,7 @@ const Portfolio = () => {
           <img
             src={arrowLeft}
             alt="Previous"
-            className="w-4 h-auto flex-shrink-0 self-center animate-fade-in cursor-pointer hover:opacity-10 transition-opacity"
-            style={{ opacity: 0.05 }}
+            className="w-4 h-auto flex-shrink-0 self-center animate-fade-in-subtle cursor-pointer hover:opacity-10 transition-opacity"
           />
 
           <p
@@ -59,15 +57,14 @@ const Portfolio = () => {
           <img
             src={arrowRight}
             alt="Next"
-            className="w-4 h-auto flex-shrink-0 self-center animate-fade-in cursor-pointer hover:opacity-10 transition-opacity"
-            style={{ opacity: 0.05 }}
+            className="w-4 h-auto flex-shrink-0 self-center animate-fade-in-subtle cursor-pointer hover:opacity-10 transition-opacity"
           />
         </div>
 
         {/* University logos */}
-        <div className="flex items-center justify-center gap-8 md:gap-16 animate-fade-in">
-          <img src={berkeleyLogo} alt="Berkeley" className="h-6 w-auto" style={{ opacity: 0.2 }} />
-          <img src={washuLogo} alt="WashU" className="h-6 w-auto" style={{ opacity: 0.2 }} />
+        <div className="flex items-center justify-center gap-8 md:gap-16 animate-fade-in-soft">
+          <img src={berkeleyLogo} alt="Berkeley" className="h-6 w-auto" />
+          <img src={washuLogo} alt="WashU" className="h-6 w-auto" />
         </div>
       </div>
 

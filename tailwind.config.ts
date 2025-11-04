@@ -98,6 +98,18 @@ export default {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
+        "fade-in-subtle": {
+          from: { opacity: "0" },
+          to: { opacity: "0.05" },
+        },
+        "fade-in-soft": {
+          from: { opacity: "0" },
+          to: { opacity: "0.2" },
+        },
+        "fade-in-muted": {
+          from: { opacity: "0" },
+          to: { opacity: "0.3" },
+        },
         "fade-out": {
           from: { opacity: "1" },
           to: { opacity: "0" },
@@ -109,6 +121,9 @@ export default {
         breathe: "breathe 6s ease-in-out infinite",
         'pulse-shadow': 'pulse-shadow 4s ease-in-out infinite',
         "fade-in": "fade-in 1.5s ease-out",
+        "fade-in-subtle": "fade-in-subtle 1.5s ease-out",
+        "fade-in-soft": "fade-in-soft 1.5s ease-out",
+        "fade-in-muted": "fade-in-muted 1.5s ease-out",
         "fade-out": "fade-out 0.3s ease-out",
       },
     },
