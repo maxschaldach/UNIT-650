@@ -27,7 +27,7 @@ const Index = () => {
         rel="noopener noreferrer"
         onMouseEnter={() => setIsButtonHovered(true)}
         onMouseLeave={() => setIsButtonHovered(false)}
-        className="mt-16 px-14 py-1 border border-white font-formula font-medium text-white text-sm md:text-sm cursor-pointer animate-fade-in transition-all duration-200 active:scale-95"
+        className="mt-16 px-14 py-1 border border-white font-formula font-medium text-white text-sm md:text-sm cursor-pointer animate-fade-in transition-all duration-300 active:scale-95"
         style={{
           borderRadius: '14px',
           transform: `scale(${isButtonHovered ? 0.98 : 0.95}) scaleY(1.33)`,
@@ -48,7 +48,7 @@ const Index = () => {
           to="/" 
           onMouseEnter={() => setHoveredLink('home')}
           onMouseLeave={() => setHoveredLink(null)}
-          className="text-white opacity-100 hover:opacity-90 transition-all duration-200" 
+          className="text-white opacity-100 hover:opacity-90 transition-all duration-300" 
           style={{ transform: `scale(${hoveredLink === 'home' ? 1.03 : 1}) scaleY(1.4)`, display: 'inline-block' }}
         >
           Home
@@ -57,7 +57,7 @@ const Index = () => {
           to="/about" 
           onMouseEnter={() => setHoveredLink('about')}
           onMouseLeave={() => setHoveredLink(null)}
-          className="text-white opacity-70 hover:opacity-90 transition-all duration-200" 
+          className="text-white opacity-70 hover:opacity-90 transition-all duration-300" 
           style={{ transform: `scale(${hoveredLink === 'about' ? 1.03 : 1}) scaleY(1.4)`, display: 'inline-block' }}
         >
           About
@@ -66,7 +66,7 @@ const Index = () => {
           to="/thesis" 
           onMouseEnter={() => setHoveredLink('thesis')}
           onMouseLeave={() => setHoveredLink(null)}
-          className="text-white opacity-70 hover:opacity-90 transition-all duration-200" 
+          className="text-white opacity-70 hover:opacity-90 transition-all duration-300" 
           style={{ transform: `scale(${hoveredLink === 'thesis' ? 1.03 : 1}) scaleY(1.4)`, display: 'inline-block' }}
         >
           Thesis
@@ -75,7 +75,7 @@ const Index = () => {
           to="/portfolio" 
           onMouseEnter={() => setHoveredLink('portfolio')}
           onMouseLeave={() => setHoveredLink(null)}
-          className="text-white opacity-70 hover:opacity-90 transition-all duration-200" 
+          className="text-white opacity-70 hover:opacity-90 transition-all duration-300" 
           style={{ transform: `scale(${hoveredLink === 'portfolio' ? 1.03 : 1}) scaleY(1.4)`, display: 'inline-block' }}
         >
           Portfolio
@@ -84,7 +84,7 @@ const Index = () => {
           to="/team" 
           onMouseEnter={() => setHoveredLink('team')}
           onMouseLeave={() => setHoveredLink(null)}
-          className="text-white opacity-70 hover:opacity-90 transition-all duration-200" 
+          className="text-white opacity-70 hover:opacity-90 transition-all duration-300" 
           style={{ transform: `scale(${hoveredLink === 'team' ? 1.03 : 1}) scaleY(1.4)`, display: 'inline-block' }}
         >
           Team
