@@ -29,6 +29,7 @@ const portfolioCompanies = [
 
 const Portfolio = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [displayIndex, setDisplayIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -45,7 +46,9 @@ const Portfolio = () => {
   const handleNext = () => {
     setIsTransitioning(true);
     setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % portfolioCompanies.length);
+      const newIndex = (currentIndex + 1) % portfolioCompanies.length;
+      setCurrentIndex(newIndex);
+      setDisplayIndex(newIndex);
       setTimeout(() => {
         setIsTransitioning(false);
       }, 150);
@@ -56,7 +59,9 @@ const Portfolio = () => {
   const handlePrevious = () => {
     setIsTransitioning(true);
     setTimeout(() => {
-      setCurrentIndex((prev) => (prev - 1 + portfolioCompanies.length) % portfolioCompanies.length);
+      const newIndex = (currentIndex - 1 + portfolioCompanies.length) % portfolioCompanies.length;
+      setCurrentIndex(newIndex);
+      setDisplayIndex(newIndex);
       setTimeout(() => {
         setIsTransitioning(false);
       }, 150);
@@ -65,7 +70,7 @@ const Portfolio = () => {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsInitialLoad(false), 100);
+    const timer = setTimeout(() => setIsInitialLoad(false), 1600);
     return () => clearTimeout(timer);
   }, []);
 
@@ -78,7 +83,7 @@ const Portfolio = () => {
     };
   }, []);
 
-  const currentCompany = portfolioCompanies[currentIndex];
+  const currentCompany = portfolioCompanies[displayIndex];
 
   return (
     <div
@@ -92,9 +97,11 @@ const Portfolio = () => {
       {/* Label box - positioned above center */}
       <div className="absolute top-[calc(50%-90px)] md:top-[calc(50%-75px)] left-1/2 -translate-x-1/2">
         <div
-          className={`px-6 py-1 border rounded-full transition-opacity duration-700 ${
-            isTransitioning ? "opacity-0" : "opacity-100"
-          } ${isInitialLoad && !isTransitioning ? "animate-fade-in-muted" : ""}`}
+          className={`px-6 py-1 border rounded-full ${
+            isInitialLoad 
+              ? "animate-fade-in-muted" 
+              : `transition-opacity duration-700 ${isTransitioning ? "opacity-0" : "opacity-100"}`
+          }`}
           style={{
             borderColor: "#142318",
           }}
@@ -115,9 +122,11 @@ const Portfolio = () => {
       {/* Main text - positioned identically to other pages */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full max-w-4xl">
         <p
-          className={`font-formula font-light text-base md:text-base lg:text-lg text-center transition-opacity duration-700 ${
-            isTransitioning ? "opacity-0" : "opacity-100"
-          } ${isInitialLoad && !isTransitioning ? "animate-fade-in" : ""}`}
+          className={`font-formula font-light text-base md:text-base lg:text-lg text-center ${
+            isInitialLoad 
+              ? "animate-fade-in" 
+              : `transition-opacity duration-700 ${isTransitioning ? "opacity-0" : "opacity-100"}`
+          }`}
           style={{
             color: "#142318",
             transform: "scaleY(1.33)",
@@ -146,9 +155,11 @@ const Portfolio = () => {
 
       {/* University logos - positioned below center */}
       <div className="absolute top-[calc(50%+60px)] md:top-[calc(50%+50px)] left-1/2 -translate-x-1/2">
-        <div className={`flex items-center justify-center gap-8 md:gap-16 transition-opacity duration-700 ${
-          isTransitioning ? "opacity-0" : "opacity-100"
-        } ${isInitialLoad && !isTransitioning ? "animate-fade-in-soft" : ""}`}>
+        <div className={`flex items-center justify-center gap-8 md:gap-16 ${
+          isInitialLoad 
+            ? "animate-fade-in-soft" 
+            : `transition-opacity duration-700 ${isTransitioning ? "opacity-0" : "opacity-100"}`
+        }`}>
           {currentCompany.logos.map((logo, index) => (
             <img key={index} src={logo.src} alt={logo.alt} className={`${logo.size} w-auto`} />
           ))}
