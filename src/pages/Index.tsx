@@ -15,6 +15,24 @@ const Index = () => {
       >
         Building for Freedom?
       </h1>
+      
+      <nav className="absolute bottom-8 flex gap-8 text-sm md:text-base">
+        <a href="#" className="text-white opacity-100 hover:opacity-90 transition-opacity">
+          Home
+        </a>
+        <a href="#about" className="text-white opacity-70 hover:opacity-90 transition-opacity">
+          About
+        </a>
+        <a href="#thesis" className="text-white opacity-70 hover:opacity-90 transition-opacity">
+          Thesis
+        </a>
+        <a href="#portfolio" className="text-white opacity-70 hover:opacity-90 transition-opacity">
+          Portfolio
+        </a>
+        <a href="#team" className="text-white opacity-70 hover:opacity-90 transition-opacity">
+          Team
+        </a>
+      </nav>
     </div>
   );
 };
