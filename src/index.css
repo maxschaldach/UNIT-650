@@ -42,12 +42,12 @@ All colors MUST be HSL.
 
     /* ✅ Updated gradient definition */
     --gradient-radial: radial-gradient(
-      circle 40vmax at 50% 22%, /* smaller circle, pushed further up */
+      circle 55vmax at 50% 20%, /* larger circle, pushed higher */
       #1d3d28 0%,               /* bright center */
-      #1b3825 35%,              /* midtone */
-      #162a1c 65%,              /* quick darkening */
-      #142318 80%,              /* almost fully dark */
-      #142318 100%              /* hard cutoff outside the circle */
+      #1c3a26 55%,              /* holds brightness longer */
+      #162a1c 75%,              /* quick transition */
+      #142318 82%,              /* near edge — darker */
+      #142318 100%              /* abrupt cutoff to background */
     );
 
     /* About page gradient - light theme */
