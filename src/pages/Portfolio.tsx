@@ -1,10 +1,10 @@
 import logoAbout from "@/assets/logo-about.svg";
 import arrowLeft from "@/assets/arrow-left.svg";
 import arrowRight from "@/assets/arrow-right.svg";
-import berkeleyLogo from "@/assets/berkeley-logo.svg";
-import washuLogo from "@/assets/washu-logo.svg";
-import ethZurichLogo from "@/assets/eth-zurich-logo.svg";
-import tumLogo from "@/assets/tum-logo.svg";
+import { ReactComponent as BerkeleyLogo } from "@/assets/berkeley-logo.svg";
+import { ReactComponent as WashULogo } from "@/assets/washu-logo.svg";
+import { ReactComponent as ETHZurichLogo } from "@/assets/eth-zurich-logo.svg";
+import { ReactComponent as TUMLogo } from "@/assets/tum-logo.svg";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
@@ -13,16 +13,16 @@ const portfolioCompanies = [
     label: "Chips",
     text: "Next-generation algorithms for a new era in chip design",
     logos: [
-      { src: berkeleyLogo, alt: "Berkeley" },
-      { src: washuLogo, alt: "WashU" },
+      { src: BerkeleyLogo, alt: "Berkeley" },
+      { src: WashULogo, alt: "WashU" },
     ],
   },
   {
     label: "Chips",
     text: "Novel chip architecture for the parallel future of computation",
     logos: [
-      { src: ethZurichLogo, alt: "ETH Zurich" },
-      { src: tumLogo, alt: "TUM" },
+      { src: ETHZurichLogo, alt: "ETH Zurich" },
+      { src: TUMLogo, alt: "TUM" },
     ],
   },
 ];
