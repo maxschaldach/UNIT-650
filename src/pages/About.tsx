@@ -9,11 +9,13 @@ const About = () => {
         className="absolute top-8 w-8 h-auto md:w-10 lg:w-12" 
       />
       <p 
-        className="font-formula font-light text-sm md:text-base lg:text-lg text-center max-w-3xl lg:max-w-4xl px-8"
+        className="font-formula font-light text-sm md:text-base lg:text-lg text-center px-8"
         style={{ 
           color: '#142318',
           transform: 'scaleY(1.33)',
-          lineHeight: '1.4'
+          lineHeight: '1.4',
+          maxWidth: '90%',
+          width: '100%'
         }}
       >
         We back defiant students, dropouts, and recent grads building technologies that advance European and U.S. leadership in critical industries to strengthen our resilience and freedom. If that's you, we're your first believers. We write fast first checks up to $100k.
