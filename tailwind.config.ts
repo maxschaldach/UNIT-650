@@ -85,9 +85,7 @@ export default {
         },
         float: {
           '0%, 100%': { transform: 'translate(0, 0) scaleY(1.33)' },
-          '25%': { transform: 'translate(2px, -2px) scaleY(1.33)' },
-          '50%': { transform: 'translate(-2px, 2px) scaleY(1.33)' },
-          '75%': { transform: 'translate(2px, 2px) scaleY(1.33)' },
+          '50%': { transform: 'translate(0, -8px) scaleY(1.33)' },
         },
         'pulse-shadow': {
           '0%': { filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.3)) drop-shadow(-20px 0 15px rgba(255, 255, 255, 0.6))' },
@@ -96,12 +94,22 @@ export default {
           '75%': { filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.3)) drop-shadow(10px 0 15px rgba(255, 255, 255, 0.6))' },
           '100%': { filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.3)) drop-shadow(20px 0 15px rgba(255, 255, 255, 0.6))' },
         },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "fade-out": {
+          from: { opacity: "1" },
+          to: { opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        float: "float 8s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
         'pulse-shadow': 'pulse-shadow 4s ease-in-out infinite',
+        "fade-in": "fade-in 0.3s ease-out",
+        "fade-out": "fade-out 0.3s ease-out",
       },
     },
   },

@@ -23,19 +23,19 @@ const Portfolio = () => {
       </p>
       
       <nav className="absolute bottom-12 flex gap-6 text-[10px] md:text-xs font-formula font-light">
-        <Link to="/" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
+        <Link to="/" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 hover:scale-110 transition-all duration-200">
           Home
         </Link>
-        <Link to="/about" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
+        <Link to="/about" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 hover:scale-110 transition-all duration-200">
           About
         </Link>
-        <Link to="/thesis" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
+        <Link to="/thesis" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 hover:scale-110 transition-all duration-200">
           Thesis
         </Link>
-        <Link to="/portfolio" style={{ color: '#142318', opacity: 1, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
+        <Link to="/portfolio" style={{ color: '#142318', opacity: 1, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 hover:scale-110 transition-all duration-200">
           Portfolio
         </Link>
-        <Link to="/team" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
+        <Link to="/team" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 hover:scale-110 transition-all duration-200">
           Team
         </Link>
       </nav>

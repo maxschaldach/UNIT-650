@@ -11,7 +11,7 @@ const Index = () => {
         style={{ filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))' }}
       />
       <h1 
-        className="font-formula text-foreground text-6xl md:text-7xl lg:text-8xl font-black tracking-normal"
+        className="font-formula text-foreground text-6xl md:text-7xl lg:text-8xl font-black tracking-normal animate-float"
         style={{ filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))', transform: 'scaleY(1.33)', display: 'inline-block' }}
       >
         Building for Freedom?
@@ -34,19 +34,19 @@ const Index = () => {
       </button>
       
       <nav className="absolute bottom-12 flex gap-6 text-[10px] md:text-xs font-formula font-light">
-        <Link to="/" className="text-white opacity-100 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
+        <Link to="/" className="text-white opacity-100 hover:opacity-90 hover:scale-110 transition-all duration-200" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Home
         </Link>
-        <Link to="/about" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
+        <Link to="/about" className="text-white opacity-70 hover:opacity-90 hover:scale-110 transition-all duration-200" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           About
         </Link>
-        <Link to="/thesis" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
+        <Link to="/thesis" className="text-white opacity-70 hover:opacity-90 hover:scale-110 transition-all duration-200" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Thesis
         </Link>
-        <Link to="/portfolio" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
+        <Link to="/portfolio" className="text-white opacity-70 hover:opacity-90 hover:scale-110 transition-all duration-200" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Portfolio
         </Link>
-        <Link to="/team" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
+        <Link to="/team" className="text-white opacity-70 hover:opacity-90 hover:scale-110 transition-all duration-200" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Team
         </Link>
       </nav>
