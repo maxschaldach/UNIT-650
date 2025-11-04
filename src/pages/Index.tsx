@@ -17,7 +17,7 @@ const Index = () => {
       </h1>
       
       <div 
-        className="mt-16 px-16 py-1 border border-white rounded-full font-formula font-medium text-white text-xs md:text-sm"
+        className="mt-16 px-16 py-1 border border-white rounded-full font-formula font-medium text-white text-[10px] md:text-xs"
         style={{ 
           transform: 'scaleY(1.33)',
           display: 'inline-block',
