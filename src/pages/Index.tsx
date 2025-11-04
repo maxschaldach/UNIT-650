@@ -6,7 +6,7 @@ const Index = () => {
       <img 
         src={logo} 
         alt="Logo" 
-        className="absolute top-8 w-10 h-auto md:w-12 lg:w-16" 
+        className="absolute top-8 w-8 h-auto md:w-10 lg:w-12" 
         style={{ filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))' }}
       />
       <h1 
