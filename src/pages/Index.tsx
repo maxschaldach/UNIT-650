@@ -27,7 +27,7 @@ const Index = () => {
         rel="noopener noreferrer"
         onMouseEnter={() => setIsButtonHovered(true)}
         onMouseLeave={() => setIsButtonHovered(false)}
-        className="mt-16 px-14 py-1 border border-white font-formula font-medium text-white text-sm md:text-sm cursor-pointer transition-all duration-300 active:scale-95"
+        className="mt-16 px-14 py-1 border border-white font-formula font-medium text-white text-sm md:text-sm cursor-pointer transition-transform duration-300 active:scale-95"
         style={{
           borderRadius: '14px',
           transform: `scale(${isButtonHovered ? 0.98 : 0.95}) scaleY(1.33)`,
