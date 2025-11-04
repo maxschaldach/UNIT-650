@@ -174,10 +174,10 @@ const Portfolio = () => {
             key={companyIndex}
             className={`flex items-center justify-center gap-8 md:gap-16 absolute top-0 left-1/2 -translate-x-1/2 transition-opacity duration-700 ${
               isInitialLoad && companyIndex === 0
-                ? "animate-fade-in-soft"
+                ? "animate-fade-in-soft z-10"
                 : displayIndex === companyIndex && !isInitialLoad
-                ? isTransitioning ? "opacity-0" : "opacity-20"
-                : "opacity-0 pointer-events-none"
+                ? isTransitioning ? "opacity-0 z-0" : "opacity-20 z-10"
+                : "opacity-0 pointer-events-none z-0"
             }`}
           >
             {company.logos.map((logo, logoIndex) => (
