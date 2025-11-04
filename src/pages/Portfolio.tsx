@@ -157,7 +157,7 @@ const Portfolio = () => {
         alt="Previous"
         onClick={handlePrevious}
         className="absolute top-[calc(50%-3px)] -translate-y-1/2 left-4 md:left-8 w-4 h-auto cursor-pointer hover:opacity-70 transition-opacity"
-        style={{ opacity: 0.3 }}
+        style={{ opacity: 0.2 }}
       />
 
       {/* Right arrow - positioned at center right */}
@@ -166,7 +166,7 @@ const Portfolio = () => {
         alt="Next"
         onClick={handleNext}
         className="absolute top-[calc(50%-3px)] -translate-y-1/2 right-4 md:right-8 w-4 h-auto cursor-pointer hover:opacity-70 transition-opacity"
-        style={{ opacity: 0.3 }}
+        style={{ opacity: 0.2 }}
       />
 
       {/* University logos - positioned below center */}
