@@ -1,10 +1,10 @@
 import logoAbout from "@/assets/logo-about.svg";
 import arrowLeft from "@/assets/arrow-left.svg";
 import arrowRight from "@/assets/arrow-right.svg";
-import BerkeleyLogo from "@/assets/berkeley-logo.svg";
-import WashULogo from "@/assets/washu-logo.svg";
-import ETHZurichLogo from "@/assets/eth-zurich-logo.svg";
-import TUMLogo from "@/assets/tum-logo.svg";
+import BerkeleyLogo from "@/assets/berkeley-logo.svg?url";
+import WashULogo from "@/assets/washu-logo.svg?url";
+import ETHZurichLogo from "@/assets/eth-zurich-logo.svg?url";
+import TUMLogo from "@/assets/tum-logo.svg?url";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
