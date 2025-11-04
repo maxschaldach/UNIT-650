@@ -9,7 +9,7 @@ const About = () => {
         className="absolute top-8 w-8 h-auto md:w-10 lg:w-12" 
       />
       <p 
-        className="font-formula font-light text-sm md:text-base lg:text-lg text-center max-w-3xl px-8"
+        className="font-formula font-light text-sm md:text-base lg:text-lg text-center max-w-3xl lg:max-w-4xl px-8"
         style={{ 
           color: '#142318',
           transform: 'scaleY(1.33)',
