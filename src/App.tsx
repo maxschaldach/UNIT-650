@@ -3,7 +3,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CursorFollower from "./components/CursorFollower";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Thesis from "./pages/Thesis";
@@ -18,7 +17,6 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <CursorFollower />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
