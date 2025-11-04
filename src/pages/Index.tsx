@@ -21,7 +21,7 @@ const Index = () => {
         href="https://www.linkedin.com/in/max-schaldach/"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-16 px-14 py-1 border border-white font-formula font-medium text-white text-sm md:text-sm cursor-pointer animate-fade-in transition-all duration-200 hover:scale-105 active:scale-95"
+        className="mt-16 px-14 py-1 border border-white font-formula font-medium text-white text-sm md:text-sm cursor-pointer animate-fade-in transition-all duration-200 hover:scale-110 active:scale-95"
         style={{
           borderRadius: '14px',
           transform: 'scale(0.95) scaleY(1.33)',
