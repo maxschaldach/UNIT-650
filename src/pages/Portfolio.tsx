@@ -38,7 +38,7 @@ const Portfolio = () => {
         </div>
 
         {/* Main content with arrows */}
-        <div className="flex items-center gap-2 md:gap-3 w-full max-w-4xl">
+        <div className="flex items-center gap-1 md:gap-2 w-full max-w-4xl">
           <img 
             src={arrowLeft} 
             alt="Previous" 
