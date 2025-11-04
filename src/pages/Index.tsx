@@ -16,7 +16,7 @@ const Index = () => {
         Building for Freedom?
       </h1>
       
-      <nav className="absolute bottom-12 flex gap-8 text-xs md:text-sm font-formula font-light">
+      <nav className="absolute bottom-12 flex gap-8 text-[10px] md:text-xs font-formula font-light">
         <a href="#" className="text-white opacity-100 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Home
         </a>
