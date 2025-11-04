@@ -42,12 +42,12 @@ All colors MUST be HSL.
 
     /* ✅ Updated gradient definition */
     --gradient-radial: radial-gradient(
-      circle 45vmax at 50% 25%, /* moderate size, centered slightly above middle */
+      circle 55vmax at 50% 20%, /* larger circle, pushed higher */
       #1d3d28 0%,               /* bright center */
-      #1c3a26 50%,              /* maintain brightness across most of the circle */
-      #162a1c 70%,              /* begin fast darkening */
-      #142318 78%,              /* dark edge */
-      #142318 100%              /* flat dark beyond */
+      #1c3a26 55%,              /* holds brightness longer */
+      #162a1c 75%,              /* quick transition */
+      #142318 82%,              /* near edge — darker */
+      #142318 100%              /* abrupt cutoff to background */
     );
 
     /* About page gradient - light theme */
@@ -122,13 +122,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply text-foreground;
-
-    /* ✅ Apply gradient as background */
-    background-color: hsl(var(--background));
+    background-color: #142318;
     background-image: var(--gradient-radial);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 80% 120%; /* narrower horizontally, extends vertically */
+    background-size: 100% auto;
   }
 }
