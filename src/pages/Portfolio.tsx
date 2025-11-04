@@ -105,7 +105,7 @@ const Portfolio = () => {
       style={{ background: "var(--gradient-radial-light)" }}
     >
       <div className="absolute top-8 left-1/2 -translate-x-1/2">
-        <img src={logoAbout} alt="Logo" className="w-12 h-auto md:w-10 lg:w-12" />
+        <img src={logoAbout} alt="Logo" className="w-10 h-auto md:w-10 lg:w-12" />
       </div>
 
       {/* Label box - positioned above center */}
@@ -156,7 +156,7 @@ const Portfolio = () => {
         src={arrowLeft}
         alt="Previous"
         onClick={handlePrevious}
-        className="absolute top-[calc(50%-3px)] -translate-y-1/2 left-8 w-4 h-auto opacity-80 animate-fade-in-subtle cursor-pointer hover:opacity-90 transition-opacity"
+        className="absolute top-[calc(50%-3px)] -translate-y-1/2 left-4 md:left-8 w-4 h-auto opacity-80 animate-fade-in-subtle cursor-pointer hover:opacity-90 transition-opacity"
       />
 
       {/* Right arrow - positioned at center right */}
@@ -164,7 +164,7 @@ const Portfolio = () => {
         src={arrowRight}
         alt="Next"
         onClick={handleNext}
-        className="absolute top-[calc(50%-3px)] -translate-y-1/2 right-8 w-4 h-auto opacity-80 animate-fade-in-subtle cursor-pointer hover:opacity-90 transition-opacity"
+        className="absolute top-[calc(50%-3px)] -translate-y-1/2 right-4 md:right-8 w-4 h-auto opacity-80 animate-fade-in-subtle cursor-pointer hover:opacity-90 transition-opacity"
       />
 
       {/* University logos - positioned below center */}
