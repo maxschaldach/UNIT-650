@@ -89,11 +89,16 @@ export default {
           '50%': { transform: 'translate(-2px, 2px) scaleY(1.33)' },
           '75%': { transform: 'translate(2px, 2px) scaleY(1.33)' },
         },
+        'pulse-shadow': {
+          '0%, 100%': { filter: 'drop-shadow(-15px 0 8px rgba(255, 255, 255, 0.4))' },
+          '50%': { filter: 'drop-shadow(15px 0 8px rgba(255, 255, 255, 0.4))' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         float: "float 8s ease-in-out infinite",
+        'pulse-shadow': 'pulse-shadow 3s ease-in-out infinite',
       },
     },
   },

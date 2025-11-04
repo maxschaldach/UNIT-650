@@ -10,19 +10,20 @@ const Index = () => {
         style={{ filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))' }}
       />
       <h1 
-        className="font-formula text-foreground text-6xl md:text-7xl lg:text-8xl font-black tracking-normal animate-float"
-        style={{ filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))' }}
+        className="font-formula text-foreground text-6xl md:text-7xl lg:text-8xl font-black tracking-normal animate-pulse-shadow"
+        style={{ transform: 'scaleY(1.33)', display: 'inline-block' }}
       >
         Building for Freedom?
       </h1>
       
       <button 
-        className="mt-16 px-20 py-1 border border-white rounded-2xl font-formula font-medium text-white text-xs md:text-sm transition-all cursor-pointer"
+        className="mt-16 px-20 py-1 border border-white rounded-2xl font-formula font-medium text-white text-xs md:text-sm cursor-pointer"
         style={{ 
           transform: 'scale(0.95) scaleY(1.33)',
           display: 'inline-block',
           paddingTop: '0.4rem',
-          filter: 'drop-shadow(0 0 0px rgba(255, 255, 255, 0))'
+          filter: 'drop-shadow(0 0 0px rgba(255, 255, 255, 0))',
+          transition: 'filter 0.4s ease-in-out'
         }}
         onMouseEnter={(e) => e.currentTarget.style.filter = 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))'}
         onMouseLeave={(e) => e.currentTarget.style.filter = 'drop-shadow(0 0 0px rgba(255, 255, 255, 0))'}
