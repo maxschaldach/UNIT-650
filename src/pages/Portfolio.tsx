@@ -45,31 +45,33 @@ const Portfolio = () => {
 
   const handleNext = () => {
     setIsTransitioning(true);
-    const newIndex = (currentIndex + 1) % portfolioCompanies.length;
-    setCurrentIndex(newIndex);
-    
-    setTimeout(() => {
-      // Update display AFTER fade-out completes
-      setDisplayIndex(newIndex);
+    setCurrentIndex((prev) => {
+      const newIndex = (prev + 1) % portfolioCompanies.length;
+      
       setTimeout(() => {
+        // Update display AND start fade-in together
+        setDisplayIndex(newIndex);
         setIsTransitioning(false);
-      }, 150);
-    }, 700);
+      }, 700);
+      
+      return newIndex;
+    });
     resetTimer();
   };
 
   const handlePrevious = () => {
     setIsTransitioning(true);
-    const newIndex = (currentIndex - 1 + portfolioCompanies.length) % portfolioCompanies.length;
-    setCurrentIndex(newIndex);
-    
-    setTimeout(() => {
-      // Update display AFTER fade-out completes
-      setDisplayIndex(newIndex);
+    setCurrentIndex((prev) => {
+      const newIndex = (prev - 1 + portfolioCompanies.length) % portfolioCompanies.length;
+      
       setTimeout(() => {
+        // Update display AND start fade-in together
+        setDisplayIndex(newIndex);
         setIsTransitioning(false);
-      }, 150);
-    }, 700);
+      }, 700);
+      
+      return newIndex;
+    });
     resetTimer();
   };
 
