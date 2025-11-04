@@ -16,16 +16,17 @@ const Index = () => {
         Building for Freedom?
       </h1>
       
-      <div 
-        className="mt-16 px-20 py-2 border border-white rounded-2xl font-formula font-medium text-white text-xs md:text-sm"
+      <button 
+        className="mt-16 px-20 py-2 border border-white rounded-2xl font-formula font-medium text-white text-xs md:text-sm hover:bg-white/10 transition-colors cursor-pointer"
         style={{ 
           transform: 'scale(0.95) scaleY(1.33)',
           display: 'inline-block',
           paddingTop: '0.5rem'
         }}
+        onClick={() => console.log('Get your first check clicked')}
       >
         Get your first check
-      </div>
+      </button>
       
       <nav className="absolute bottom-12 flex gap-6 text-[10px] md:text-xs font-formula font-light">
         <a href="#" className="text-white opacity-100 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
