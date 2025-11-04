@@ -156,7 +156,8 @@ const Portfolio = () => {
         src={arrowLeft}
         alt="Previous"
         onClick={handlePrevious}
-        className="absolute top-[calc(50%-3px)] -translate-y-1/2 left-4 md:left-8 w-4 h-auto opacity-80 animate-fade-in-subtle cursor-pointer hover:opacity-90 transition-opacity"
+        className="absolute top-[calc(50%-3px)] -translate-y-1/2 left-4 md:left-8 w-5 h-auto cursor-pointer hover:scale-110 transition-all"
+        style={{ opacity: 0.95 }}
       />
 
       {/* Right arrow - positioned at center right */}
@@ -164,7 +165,8 @@ const Portfolio = () => {
         src={arrowRight}
         alt="Next"
         onClick={handleNext}
-        className="absolute top-[calc(50%-3px)] -translate-y-1/2 right-4 md:right-8 w-4 h-auto opacity-80 animate-fade-in-subtle cursor-pointer hover:opacity-90 transition-opacity"
+        className="absolute top-[calc(50%-3px)] -translate-y-1/2 right-4 md:right-8 w-5 h-auto cursor-pointer hover:scale-110 transition-all"
+        style={{ opacity: 0.95 }}
       />
 
       {/* University logos - positioned below center */}
