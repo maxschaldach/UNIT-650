@@ -108,7 +108,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         breathe: "breathe 6s ease-in-out infinite",
         'pulse-shadow': 'pulse-shadow 4s ease-in-out infinite',
-        "fade-in": "fade-in 0.8s ease-out",
+        "fade-in": "fade-in 1.5s ease-out",
         "fade-out": "fade-out 0.3s ease-out",
       },
     },
