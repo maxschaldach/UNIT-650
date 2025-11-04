@@ -152,20 +152,30 @@ const Portfolio = () => {
       </div>
 
       {/* Left arrow - positioned at center left */}
-      <img
-        src={arrowLeft}
-        alt="Previous"
+      <button
         onClick={handlePrevious}
-        className="absolute top-[calc(50%-3px)] -translate-y-1/2 left-4 md:left-8 w-3 md:w-4 h-auto cursor-pointer transition-opacity opacity-5 md:opacity-10"
-      />
+        className="absolute top-[calc(50%-3px)] -translate-y-1/2 left-4 md:left-8 cursor-pointer p-4"
+        aria-label="Previous"
+      >
+        <img
+          src={arrowLeft}
+          alt=""
+          className="w-3 md:w-4 h-auto transition-opacity opacity-5 md:opacity-10"
+        />
+      </button>
 
       {/* Right arrow - positioned at center right */}
-      <img
-        src={arrowRight}
-        alt="Next"
+      <button
         onClick={handleNext}
-        className="absolute top-[calc(50%-3px)] -translate-y-1/2 right-4 md:right-8 w-3 md:w-4 h-auto cursor-pointer transition-opacity opacity-5 md:opacity-10"
-      />
+        className="absolute top-[calc(50%-3px)] -translate-y-1/2 right-4 md:right-8 cursor-pointer p-4"
+        aria-label="Next"
+      >
+        <img
+          src={arrowRight}
+          alt=""
+          className="w-3 md:w-4 h-auto transition-opacity opacity-5 md:opacity-10"
+        />
+      </button>
 
       {/* University logos - positioned below center */}
       <div className="absolute top-[calc(50%+60px)] md:top-[calc(50%+50px)] left-1/2 -translate-x-1/2">
