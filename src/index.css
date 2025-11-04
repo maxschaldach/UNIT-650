@@ -12,6 +12,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'PPFormula';
+  src: url('/fonts/PPFormula-CondensedBlack.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PPFormula';
+  src: url('/fonts/PPFormula-Light.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PPFormula';
+  src: url('/fonts/PPFormula-Medium.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* Optional italic example */
 @font-face {
   font-family: 'PPFormula';
