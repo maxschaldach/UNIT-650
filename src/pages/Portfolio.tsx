@@ -10,7 +10,7 @@ import { useState, useEffect, useRef } from "react";
 
 const portfolioCompanies = [
   {
-    label: "Chips",
+    label: "U.S.",
     text: "Next-generation algorithms for a new era in chip design",
     logos: [
       { src: BerkeleyLogo, alt: "Berkeley" },
@@ -18,7 +18,7 @@ const portfolioCompanies = [
     ],
   },
   {
-    label: "Chips",
+    label: "Europe",
     text: "Novel chip architecture for the parallel future of computation",
     logos: [
       { src: ETHZurichLogo, alt: "ETH Zurich" },
