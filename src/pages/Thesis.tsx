@@ -1,6 +1,6 @@
 import logoAbout from "@/assets/logo-about.svg";
 
-const About = () => {
+const Thesis = () => {
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center overflow-hidden pt-8" style={{ background: 'var(--gradient-radial-light)' }}>
       <img 
@@ -18,17 +18,17 @@ const About = () => {
           width: '100%'
         }}
       >
-        We back defiant students, dropouts, and recent grads building technologies that advance European and U.S. leadership in critical industries to strengthen our resilience and freedom. If that's you, we're your first believers. We write fast first checks up to $100k.
+        Freedom rests on technological independence.
       </p>
       
       <nav className="absolute bottom-12 flex gap-6 text-[10px] md:text-xs font-formula font-light">
         <a href="/" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
           Home
         </a>
-        <a href="/about" style={{ color: '#142318', opacity: 1, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
+        <a href="/about" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
           About
         </a>
-        <a href="/thesis" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
+        <a href="/thesis" style={{ color: '#142318', opacity: 1, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
           Thesis
         </a>
         <a href="#portfolio" style={{ color: '#142318', opacity: 0.7, transform: 'scaleY(1.4)', display: 'inline-block' }} className="hover:opacity-90 transition-opacity">
@@ -42,4 +42,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Thesis;
