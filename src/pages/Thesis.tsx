@@ -18,7 +18,7 @@ const Thesis = () => {
           width: '100%'
         }}
       >
-        Freedom rests on technological independence.
+        Freedom is a function on technological independence.
       </p>
       
       <nav className="absolute bottom-12 flex gap-6 text-[10px] md:text-xs font-formula font-light">
