@@ -1,6 +1,6 @@
 import logo from "@/assets/logo.svg";
 
-const Index = () => {
+const About = () => {
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center overflow-hidden pt-8" style={{ background: 'var(--gradient-radial)' }}>
       <img 
@@ -13,30 +13,21 @@ const Index = () => {
         className="font-formula text-foreground text-6xl md:text-7xl lg:text-8xl font-black tracking-normal"
         style={{ filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))', transform: 'scaleY(1.33)', display: 'inline-block' }}
       >
-        Building for Freedom?
+        About Us
       </h1>
       
-      <button 
-        className="mt-16 px-20 py-1 border border-white rounded-2xl font-formula font-medium text-white text-xs md:text-sm cursor-pointer"
-        style={{ 
-          transform: 'scale(0.95) scaleY(1.33)',
-          display: 'inline-block',
-          paddingTop: '0.4rem',
-          filter: 'drop-shadow(0 0 0px rgba(255, 255, 255, 0))',
-          transition: 'filter 0.4s ease-in-out'
-        }}
-        onMouseEnter={(e) => e.currentTarget.style.filter = 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))'}
-        onMouseLeave={(e) => e.currentTarget.style.filter = 'drop-shadow(0 0 0px rgba(255, 255, 255, 0))'}
-        onClick={() => console.log('Get your first check clicked')}
+      <p 
+        className="mt-8 max-w-2xl text-center font-formula text-foreground text-lg md:text-xl font-light px-8"
+        style={{ transform: 'scaleY(1.33)', display: 'inline-block' }}
       >
-        Get your first check
-      </button>
+        We're building the future of freedom
+      </p>
       
       <nav className="absolute bottom-12 flex gap-6 text-[10px] md:text-xs font-formula font-light">
-        <a href="/" style={{ color: '#142318', transform: 'scaleY(1.4)', display: 'inline-block', opacity: 1 }} className="hover:opacity-90 transition-opacity">
+        <a href="/" style={{ color: '#142318', transform: 'scaleY(1.4)', display: 'inline-block', opacity: 0.7 }} className="hover:opacity-90 transition-opacity">
           Home
         </a>
-        <a href="/about" style={{ color: '#142318', transform: 'scaleY(1.4)', display: 'inline-block', opacity: 0.7 }} className="hover:opacity-90 transition-opacity">
+        <a href="/about" style={{ color: '#142318', transform: 'scaleY(1.4)', display: 'inline-block', opacity: 1 }} className="hover:opacity-90 transition-opacity">
           About
         </a>
         <a href="#thesis" style={{ color: '#142318', transform: 'scaleY(1.4)', display: 'inline-block', opacity: 0.7 }} className="hover:opacity-90 transition-opacity">
@@ -53,4 +44,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default About;
