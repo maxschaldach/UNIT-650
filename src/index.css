@@ -1,28 +1,28 @@
 @font-face {
-  font-family: 'PPFormula';
-  src: url('/fonts/PPFormula-Light.otf') format('opentype');
+  font-family: "PPFormula";
+  src: url("/fonts/PPFormula-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PPFormula';
-  src: url('/fonts/PPFormula-Medium.otf') format('opentype');
+  font-family: "PPFormula";
+  src: url("/fonts/PPFormula-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PPFormula';
-  src: url('/fonts/PPFormula-CondensedBlack.otf') format('opentype');
+  font-family: "PPFormula";
+  src: url("/fonts/PPFormula-CondensedBlack.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 
 /* Optional italic example */
 @font-face {
-  font-family: 'PPFormula';
-  src: url('/fonts/PPFormula-MediumItalic.otf') format('opentype');
+  font-family: "PPFormula";
+  src: url("/fonts/PPFormula-MediumItalic.otf") format("opentype");
   font-weight: 500;
   font-style: italic;
 }
@@ -42,20 +42,16 @@ All colors MUST be HSL.
 
     /* ✅ Updated gradient definition */
     --gradient-radial: radial-gradient(
-      circle 55vmax at 50% 20%, /* larger circle, pushed higher */
-      #1d3d28 0%,               /* bright center */
-      #1c3a26 55%,              /* holds brightness longer */
-      #162a1c 75%,              /* quick transition */
-      #142318 82%,              /* near edge — darker */
-      #142318 100%              /* abrupt cutoff to background */
+      circle 55vmax at 50% 30%,
+      /* larger circle, pushed higher */ #1d3d28 0%,
+      /* bright center */ #1c3a26 55%,
+      /* holds brightness longer */ #162a1c 75%,
+      /* quick transition */ #142318 82%,
+      /* near edge — darker */ #142318 100% /* abrupt cutoff to background */
     );
 
     /* About page gradient - light theme */
-    --gradient-radial-light: radial-gradient(
-      circle at 50% 45%,
-      hsl(0 0% 100%) 0%, 
-      hsl(0 0% 91%) 100%
-    );
+    --gradient-radial-light: radial-gradient(circle at 50% 45%, hsl(0 0% 100%) 0%, hsl(0 0% 91%) 100%);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
