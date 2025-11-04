@@ -16,7 +16,7 @@ const Portfolio = () => {
       </div>
 
       {/* Chips box - positioned above center */}
-      <div className="absolute top-[calc(50%-60px)] left-1/2 -translate-x-1/2">
+      <div className="absolute top-[calc(50%-90px)] left-1/2 -translate-x-1/2">
         <div
           className="px-6 py-1 border rounded-full animate-fade-in-muted"
           style={{
@@ -54,14 +54,14 @@ const Portfolio = () => {
       <img
         src={arrowLeft}
         alt="Previous"
-        className="absolute top-1/2 -translate-y-1/2 left-8 w-4 h-auto opacity-80 animate-fade-in-subtle cursor-pointer hover:opacity-10 transition-opacity"
+        className="absolute top-[calc(50%-3px)] -translate-y-1/2 left-8 w-4 h-auto opacity-80 animate-fade-in-subtle cursor-pointer hover:opacity-10 transition-opacity"
       />
 
       {/* Right arrow - positioned at center right */}
       <img
         src={arrowRight}
         alt="Next"
-        className="absolute top-1/2 -translate-y-1/2 right-8 w-4 h-auto opacity-80 animate-fade-in-subtle cursor-pointer hover:opacity-10 transition-opacity"
+        className="absolute top-[calc(50%-3px)] -translate-y-1/2 right-8 w-4 h-auto opacity-80 animate-fade-in-subtle cursor-pointer hover:opacity-10 transition-opacity"
       />
 
       {/* University logos - positioned below center */}
