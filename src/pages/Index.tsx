@@ -30,7 +30,7 @@ const Index = () => {
         className="mt-16 px-14 py-1 border border-white font-formula font-medium text-white text-sm md:text-sm cursor-pointer animate-fade-in transition-all duration-200 active:scale-95"
         style={{
           borderRadius: '14px',
-          transform: `scale(${isButtonHovered ? 1.045 : 0.95}) scaleY(1.33)`,
+          transform: `scale(${isButtonHovered ? 1.02 : 0.95}) scaleY(1.33)`,
           display: 'inline-block',
           paddingTop: '0.4rem',
           background: 'transparent',
@@ -49,7 +49,7 @@ const Index = () => {
           onMouseEnter={() => setHoveredLink('home')}
           onMouseLeave={() => setHoveredLink(null)}
           className="text-white opacity-100 hover:opacity-90 transition-all duration-200" 
-          style={{ transform: `scale(${hoveredLink === 'home' ? 1.1 : 1}) scaleY(1.4)`, display: 'inline-block' }}
+          style={{ transform: `scale(${hoveredLink === 'home' ? 1.05 : 1}) scaleY(1.4)`, display: 'inline-block' }}
         >
           Home
         </Link>
@@ -58,7 +58,7 @@ const Index = () => {
           onMouseEnter={() => setHoveredLink('about')}
           onMouseLeave={() => setHoveredLink(null)}
           className="text-white opacity-70 hover:opacity-90 transition-all duration-200" 
-          style={{ transform: `scale(${hoveredLink === 'about' ? 1.1 : 1}) scaleY(1.4)`, display: 'inline-block' }}
+          style={{ transform: `scale(${hoveredLink === 'about' ? 1.05 : 1}) scaleY(1.4)`, display: 'inline-block' }}
         >
           About
         </Link>
@@ -67,7 +67,7 @@ const Index = () => {
           onMouseEnter={() => setHoveredLink('thesis')}
           onMouseLeave={() => setHoveredLink(null)}
           className="text-white opacity-70 hover:opacity-90 transition-all duration-200" 
-          style={{ transform: `scale(${hoveredLink === 'thesis' ? 1.1 : 1}) scaleY(1.4)`, display: 'inline-block' }}
+          style={{ transform: `scale(${hoveredLink === 'thesis' ? 1.05 : 1}) scaleY(1.4)`, display: 'inline-block' }}
         >
           Thesis
         </Link>
@@ -76,7 +76,7 @@ const Index = () => {
           onMouseEnter={() => setHoveredLink('portfolio')}
           onMouseLeave={() => setHoveredLink(null)}
           className="text-white opacity-70 hover:opacity-90 transition-all duration-200" 
-          style={{ transform: `scale(${hoveredLink === 'portfolio' ? 1.1 : 1}) scaleY(1.4)`, display: 'inline-block' }}
+          style={{ transform: `scale(${hoveredLink === 'portfolio' ? 1.05 : 1}) scaleY(1.4)`, display: 'inline-block' }}
         >
           Portfolio
         </Link>
@@ -85,7 +85,7 @@ const Index = () => {
           onMouseEnter={() => setHoveredLink('team')}
           onMouseLeave={() => setHoveredLink(null)}
           className="text-white opacity-70 hover:opacity-90 transition-all duration-200" 
-          style={{ transform: `scale(${hoveredLink === 'team' ? 1.1 : 1}) scaleY(1.4)`, display: 'inline-block' }}
+          style={{ transform: `scale(${hoveredLink === 'team' ? 1.05 : 1}) scaleY(1.4)`, display: 'inline-block' }}
         >
           Team
         </Link>
