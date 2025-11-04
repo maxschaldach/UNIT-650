@@ -2,7 +2,7 @@ import logo from "@/assets/logo.svg";
 
 const Index = () => {
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center overflow-hidden" style={{ background: 'var(--gradient-radial)' }}>
+    <div className="fixed inset-0 flex flex-col items-center justify-center overflow-hidden pt-12" style={{ background: 'var(--gradient-radial)' }}>
       <img 
         src={logo} 
         alt="Logo" 
@@ -17,7 +17,7 @@ const Index = () => {
       </h1>
       
       <div 
-        className="mt-16 px-16 py-1 border border-white rounded-full font-formula font-medium text-white text-[10px] md:text-xs"
+        className="mt-20 px-16 py-1 border border-white rounded-full font-formula font-medium text-white text-[10px] md:text-xs"
         style={{ 
           filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))',
           transform: 'scaleY(1.33)',
