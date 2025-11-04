@@ -7,7 +7,7 @@ const Index = () => {
         src={logo} 
         alt="Logo" 
         className="absolute top-8 w-10 h-auto md:w-12 lg:w-16" 
-        style={{ filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))' }}
+        style={{ filter: 'drop-shadow(0 0 7px rgba(255, 255, 255, 0.6))' }}
       />
       <h1 
         className="font-formula text-foreground text-6xl md:text-8xl lg:text-9xl font-black tracking-normal"
