@@ -6,23 +6,23 @@ import washuLogo from "@/assets/washu-logo.svg";
 import ethZurichLogo from "@/assets/eth-zurich-logo.svg";
 import tumLogo from "@/assets/tum-logo.svg";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const portfolioCompanies = [
   {
     label: "Chips",
     text: "Next-generation algorithms for a new era in chip design",
     logos: [
-      { src: berkeleyLogo, alt: "Berkeley" },
-      { src: washuLogo, alt: "WashU" },
+      { src: berkeleyLogo, alt: "Berkeley", size: "h-6" },
+      { src: washuLogo, alt: "WashU", size: "h-6" },
     ],
   },
   {
     label: "Chips",
     text: "Novel chip architecture for the parallel future of computation",
     logos: [
-      { src: ethZurichLogo, alt: "ETH Zurich" },
-      { src: tumLogo, alt: "TUM" },
+      { src: ethZurichLogo, alt: "ETH Zurich", size: "h-5" },
+      { src: tumLogo, alt: "TUM", size: "h-5" },
     ],
   },
 ];
@@ -30,29 +30,46 @@ const portfolioCompanies = [
 const Portfolio = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const resetTimer = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+      handleNext();
+    }, 7000);
+  };
 
   const handleNext = () => {
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % portfolioCompanies.length);
-      setIsTransitioning(false);
-    }, 300);
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 50);
+    }, 800);
+    resetTimer();
   };
 
   const handlePrevious = () => {
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentIndex((prev) => (prev - 1 + portfolioCompanies.length) % portfolioCompanies.length);
-      setIsTransitioning(false);
-    }, 300);
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 50);
+    }, 800);
+    resetTimer();
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 7000);
-
-    return () => clearInterval(interval);
+    resetTimer();
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, []);
 
   const currentCompany = portfolioCompanies[currentIndex];
@@ -69,8 +86,8 @@ const Portfolio = () => {
       {/* Label box - positioned above center */}
       <div className="absolute top-[calc(50%-90px)] md:top-[calc(50%-75px)] left-1/2 -translate-x-1/2">
         <div
-          className={`px-6 py-1 border rounded-full transition-opacity duration-300 ${
-            isTransitioning ? "opacity-0" : "opacity-100 animate-fade-in-muted"
+          className={`px-6 py-1 border rounded-full transition-opacity duration-700 ${
+            isTransitioning ? "opacity-0" : "opacity-100"
           }`}
           style={{
             borderColor: "#142318",
@@ -92,8 +109,8 @@ const Portfolio = () => {
       {/* Main text - positioned identically to other pages */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full max-w-4xl">
         <p
-          className={`font-formula font-light text-base md:text-base lg:text-lg text-center transition-opacity duration-300 ${
-            isTransitioning ? "opacity-0" : "opacity-100 animate-fade-in"
+          className={`font-formula font-light text-base md:text-base lg:text-lg text-center transition-opacity duration-700 ${
+            isTransitioning ? "opacity-0" : "opacity-100"
           }`}
           style={{
             color: "#142318",
@@ -123,11 +140,11 @@ const Portfolio = () => {
 
       {/* University logos - positioned below center */}
       <div className="absolute top-[calc(50%+60px)] md:top-[calc(50%+50px)] left-1/2 -translate-x-1/2">
-        <div className={`flex items-center justify-center gap-8 md:gap-16 transition-opacity duration-300 ${
-          isTransitioning ? "opacity-0" : "opacity-100 animate-fade-in-soft"
+        <div className={`flex items-center justify-center gap-8 md:gap-16 transition-opacity duration-700 ${
+          isTransitioning ? "opacity-0" : "opacity-100"
         }`}>
           {currentCompany.logos.map((logo, index) => (
-            <img key={index} src={logo.src} alt={logo.alt} className="h-6 w-auto" />
+            <img key={index} src={logo.src} alt={logo.alt} className={`${logo.size} w-auto`} />
           ))}
         </div>
       </div>
