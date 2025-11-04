@@ -156,7 +156,7 @@ const Portfolio = () => {
         src={arrowLeft}
         alt="Previous"
         onClick={handlePrevious}
-        className="absolute top-[calc(50%-3px)] -translate-y-1/2 left-4 md:left-8 w-4 h-auto cursor-pointer hover:opacity-70 transition-opacity"
+        className="absolute top-[calc(50%-3px)] -translate-y-1/2 left-4 md:left-8 w-3 md:w-4 h-auto cursor-pointer hover:opacity-70 transition-opacity"
         style={{ opacity: 0.1 }}
       />
 
@@ -165,7 +165,7 @@ const Portfolio = () => {
         src={arrowRight}
         alt="Next"
         onClick={handleNext}
-        className="absolute top-[calc(50%-3px)] -translate-y-1/2 right-4 md:right-8 w-4 h-auto cursor-pointer hover:opacity-70 transition-opacity"
+        className="absolute top-[calc(50%-3px)] -translate-y-1/2 right-4 md:right-8 w-3 md:w-4 h-auto cursor-pointer hover:opacity-70 transition-opacity"
         style={{ opacity: 0.1 }}
       />
 
