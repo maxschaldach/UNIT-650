@@ -15,14 +15,14 @@
 @font-face {
   font-family: 'PPFormula';
   src: url('/fonts/PPFormula-CondensedBlack.otf') format('opentype');
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PPFormula';
   src: url('/fonts/PPFormula-Light.otf') format('opentype');
-  font-weight: 700;
+  font-weight: 300;
   font-style: normal;
 }
 

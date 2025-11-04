@@ -10,13 +10,13 @@ const Index = () => {
         style={{ filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))' }}
       />
       <h1 
-        className="font-formula text-foreground text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight"
+        className="font-formula text-foreground text-5xl md:text-7xl lg:text-8xl font-black tracking-tight"
         style={{ filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))' }}
       >
         Building for Freedom?
       </h1>
       
-      <nav className="absolute bottom-8 flex gap-8 text-sm md:text-base">
+      <nav className="absolute bottom-8 flex gap-8 text-sm md:text-base font-formula font-light">
         <a href="#" className="text-white opacity-100 hover:opacity-90 transition-opacity">
           Home
         </a>
