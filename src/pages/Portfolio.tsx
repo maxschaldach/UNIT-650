@@ -28,7 +28,7 @@ const Portfolio = () => {
             className="font-formula font-light text-xs"
             style={{
               color: "#142318",
-              transform: "scaleY(1.1)",
+              transform: "scaleY(1.33)",
               display: "inline-block",
             }}
           >
