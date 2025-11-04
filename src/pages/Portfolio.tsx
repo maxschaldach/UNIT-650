@@ -15,7 +15,7 @@ const Portfolio = () => {
         <img src={logoAbout} alt="Logo" className="w-12 h-auto md:w-10 lg:w-12" />
       </div>
 
-      <div className="absolute top-[calc(50%-40px)] left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full flex flex-col items-center gap-8">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full flex flex-col items-center gap-8">
         {/* Category box */}
         <div
           className="px-6 py-1 border rounded-full animate-fade-in-muted"
