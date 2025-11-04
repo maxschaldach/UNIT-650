@@ -33,19 +33,19 @@ const Index = () => {
       </button>
       
       <nav className="absolute bottom-12 flex gap-6 text-[10px] md:text-xs font-formula font-light">
-        <a href="/" style={{ color: '#142318', transform: 'scaleY(1.4)', display: 'inline-block', opacity: 1 }} className="hover:opacity-90 transition-opacity">
+        <a href="/" className="text-white opacity-100 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Home
         </a>
-        <a href="/about" style={{ color: '#142318', transform: 'scaleY(1.4)', display: 'inline-block', opacity: 0.7 }} className="hover:opacity-90 transition-opacity">
+        <a href="/about" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           About
         </a>
-        <a href="#thesis" style={{ color: '#142318', transform: 'scaleY(1.4)', display: 'inline-block', opacity: 0.7 }} className="hover:opacity-90 transition-opacity">
+        <a href="#thesis" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Thesis
         </a>
-        <a href="#portfolio" style={{ color: '#142318', transform: 'scaleY(1.4)', display: 'inline-block', opacity: 0.7 }} className="hover:opacity-90 transition-opacity">
+        <a href="#portfolio" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Portfolio
         </a>
-        <a href="#team" style={{ color: '#142318', transform: 'scaleY(1.4)', display: 'inline-block', opacity: 0.7 }} className="hover:opacity-90 transition-opacity">
+        <a href="#team" className="text-white opacity-70 hover:opacity-90 transition-opacity" style={{ transform: 'scaleY(1.4)', display: 'inline-block' }}>
           Team
         </a>
       </nav>

@@ -42,9 +42,11 @@ All colors MUST be HSL.
 
     /* ✅ Updated gradient definition */
     --gradient-radial: radial-gradient(
-      circle at 50% 50%,
-      hsl(0 0% 100%) 0%, 
-      hsl(0 0% 91%) 100%
+      circle at 50% 45%, /* circular, slightly above center */
+      hsl(150 35% 18%) 0%, 
+      hsl(150 34% 17%) 39%,
+      hsl(150 35% 14%) 78%,
+      hsl(150 30% 11%) 100%
     );
 
     --card: 0 0% 100%;
