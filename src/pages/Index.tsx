@@ -1,6 +1,9 @@
+import logo from "@/assets/logo.svg";
+
 const Index = () => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center overflow-hidden" style={{ background: 'var(--gradient-radial)' }}>
+    <div className="fixed inset-0 flex flex-col items-center justify-center overflow-hidden" style={{ background: 'var(--gradient-radial)' }}>
+      <img src={logo} alt="Logo" className="absolute top-8 w-16 h-auto md:w-20 lg:w-24" />
       <h1 className="font-formula text-foreground text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight">
         Rewriting the World?
       </h1>
