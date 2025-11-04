@@ -15,8 +15,8 @@ const Portfolio = () => {
         <img src={logoAbout} alt="Logo" className="w-12 h-auto md:w-10 lg:w-12" />
       </div>
 
-      <div className="absolute top-[calc(50%-5px)] left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full flex flex-col items-center gap-8">
-        {/* Category box */}
+      {/* Chips box - positioned above center */}
+      <div className="absolute top-[calc(50%-80px)] left-1/2 -translate-x-1/2">
         <div
           className="px-6 py-1 border rounded-full animate-fade-in-muted"
           style={{
@@ -34,34 +34,38 @@ const Portfolio = () => {
             Chips
           </span>
         </div>
+      </div>
 
-        {/* Main content with arrows */}
-        <div className="flex items-center gap-1 w-full max-w-4xl">
-          <img
-            src={arrowLeft}
-            alt="Previous"
-            className="w-4 h-auto flex-shrink-0 self-center animate-fade-in-subtle cursor-pointer hover:opacity-10 transition-opacity"
-          />
+      {/* Main text - positioned identically to other pages */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 w-full max-w-4xl">
+        <p
+          className="font-formula font-light text-base md:text-base lg:text-lg text-center animate-fade-in"
+          style={{
+            color: "#142318",
+            transform: "scaleY(1.33)",
+            lineHeight: "1.4",
+          }}
+        >
+          Next-generation algorithms for a new era in chip design
+        </p>
+      </div>
 
-          <p
-            className="font-formula font-light text-base md:text-base lg:text-lg text-center animate-fade-in flex-1"
-            style={{
-              color: "#142318",
-              transform: "scaleY(1.33)",
-              lineHeight: "1.4",
-            }}
-          >
-            Next-generation algorithms for a new era in chip design
-          </p>
+      {/* Left arrow - positioned at center left */}
+      <img
+        src={arrowLeft}
+        alt="Previous"
+        className="absolute top-1/2 -translate-y-1/2 left-8 w-4 h-auto animate-fade-in-subtle cursor-pointer hover:opacity-10 transition-opacity"
+      />
 
-          <img
-            src={arrowRight}
-            alt="Next"
-            className="w-4 h-auto flex-shrink-0 self-center animate-fade-in-subtle cursor-pointer hover:opacity-10 transition-opacity"
-          />
-        </div>
+      {/* Right arrow - positioned at center right */}
+      <img
+        src={arrowRight}
+        alt="Next"
+        className="absolute top-1/2 -translate-y-1/2 right-8 w-4 h-auto animate-fade-in-subtle cursor-pointer hover:opacity-10 transition-opacity"
+      />
 
-        {/* University logos */}
+      {/* University logos - positioned below center */}
+      <div className="absolute top-[calc(50%+60px)] left-1/2 -translate-x-1/2">
         <div className="flex items-center justify-center gap-8 md:gap-16 animate-fade-in-soft">
           <img src={berkeleyLogo} alt="Berkeley" className="h-6 w-auto" />
           <img src={washuLogo} alt="WashU" className="h-6 w-auto" />
