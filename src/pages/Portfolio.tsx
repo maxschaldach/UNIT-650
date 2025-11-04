@@ -30,6 +30,7 @@ const portfolioCompanies = [
 const Portfolio = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const resetTimer = () => {
@@ -47,8 +48,8 @@ const Portfolio = () => {
       setCurrentIndex((prev) => (prev + 1) % portfolioCompanies.length);
       setTimeout(() => {
         setIsTransitioning(false);
-      }, 50);
-    }, 800);
+      }, 150);
+    }, 700);
     resetTimer();
   };
 
@@ -58,10 +59,15 @@ const Portfolio = () => {
       setCurrentIndex((prev) => (prev - 1 + portfolioCompanies.length) % portfolioCompanies.length);
       setTimeout(() => {
         setIsTransitioning(false);
-      }, 50);
-    }, 800);
+      }, 150);
+    }, 700);
     resetTimer();
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsInitialLoad(false), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     resetTimer();
@@ -88,7 +94,7 @@ const Portfolio = () => {
         <div
           className={`px-6 py-1 border rounded-full transition-opacity duration-700 ${
             isTransitioning ? "opacity-0" : "opacity-100"
-          }`}
+          } ${isInitialLoad && !isTransitioning ? "animate-fade-in-muted" : ""}`}
           style={{
             borderColor: "#142318",
           }}
@@ -111,7 +117,7 @@ const Portfolio = () => {
         <p
           className={`font-formula font-light text-base md:text-base lg:text-lg text-center transition-opacity duration-700 ${
             isTransitioning ? "opacity-0" : "opacity-100"
-          }`}
+          } ${isInitialLoad && !isTransitioning ? "animate-fade-in" : ""}`}
           style={{
             color: "#142318",
             transform: "scaleY(1.33)",
@@ -142,7 +148,7 @@ const Portfolio = () => {
       <div className="absolute top-[calc(50%+60px)] md:top-[calc(50%+50px)] left-1/2 -translate-x-1/2">
         <div className={`flex items-center justify-center gap-8 md:gap-16 transition-opacity duration-700 ${
           isTransitioning ? "opacity-0" : "opacity-100"
-        }`}>
+        } ${isInitialLoad && !isTransitioning ? "animate-fade-in-soft" : ""}`}>
           {currentCompany.logos.map((logo, index) => (
             <img key={index} src={logo.src} alt={logo.alt} className={`${logo.size} w-auto`} />
           ))}
