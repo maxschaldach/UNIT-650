@@ -12,7 +12,7 @@ const Index = () => {
       />
       <h1 
         className="font-formula text-foreground text-7xl md:text-7xl lg:text-8xl font-black tracking-normal animate-fade-in px-4 text-center leading-[0.9] md:leading-normal max-w-[90%]"
-        style={{ filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))', transform: 'scaleY(1.33)', willChange: 'filter, transform' }}
+        style={{ filter: 'drop-shadow(0 0 6px rgba(255, 255, 255, 0.35))', transform: 'scaleY(1.33)', willChange: 'filter, transform' }}
       >
         Building for Freedom?
       </h1>
@@ -27,7 +27,7 @@ const Index = () => {
           transform: 'scale(0.95) scaleY(1.33)',
           display: 'inline-block',
           paddingTop: '0.4rem',
-          filter: 'drop-shadow(0 0 2px rgba(255, 255, 255, 0.4))',
+          boxShadow: '0 0 2px rgba(255, 255, 255, 0.4)',
           animationDelay: '0.4s',
           opacity: 0,
           animationFillMode: 'forwards'
