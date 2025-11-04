@@ -83,9 +83,9 @@ export default {
             height: "0",
           },
         },
-        float: {
-          '0%, 100%': { transform: 'translate(0, 0) scaleY(1.33)' },
-          '50%': { transform: 'translate(0, -8px) scaleY(1.33)' },
+        breathe: {
+          '0%, 100%': { transform: 'scale(1) scaleY(1.33)' },
+          '50%': { transform: 'scale(1.02) scaleY(1.35)' },
         },
         'pulse-shadow': {
           '0%': { filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.3)) drop-shadow(-20px 0 15px rgba(255, 255, 255, 0.6))' },
@@ -106,7 +106,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        float: "float 6s ease-in-out infinite",
+        breathe: "breathe 4s ease-in-out infinite",
         'pulse-shadow': 'pulse-shadow 4s ease-in-out infinite',
         "fade-in": "fade-in 0.3s ease-out",
         "fade-out": "fade-out 0.3s ease-out",
