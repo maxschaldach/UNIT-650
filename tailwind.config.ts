@@ -83,10 +83,17 @@ export default {
             height: "0",
           },
         },
+        float: {
+          '0%, 100%': { transform: 'translate(0, 0) scaleY(1.33)' },
+          '25%': { transform: 'translate(2px, -2px) scaleY(1.33)' },
+          '50%': { transform: 'translate(-2px, 2px) scaleY(1.33)' },
+          '75%': { transform: 'translate(2px, 2px) scaleY(1.33)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        float: "float 8s ease-in-out infinite",
       },
     },
   },
