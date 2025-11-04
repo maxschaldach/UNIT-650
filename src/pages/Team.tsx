@@ -12,7 +12,7 @@ const Team = () => {
         />
       </div>
       
-      <div className="flex-1 flex items-center justify-center px-8 pb-12">
+      <div className="flex-1 flex items-center justify-center px-8 pb-16">
         <p 
           className="font-formula font-light text-base md:text-base lg:text-lg text-center animate-fade-in"
           style={{ 
