@@ -17,7 +17,7 @@ const Index = () => {
       </h1>
       
       <div 
-        className="mt-8 px-8 py-4 border-2 border-white rounded-2xl font-formula font-medium text-white text-lg md:text-xl"
+        className="mt-8 px-12 py-2 border border-white rounded-2xl font-formula font-medium text-white text-sm md:text-base"
         style={{ 
           filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))',
           transform: 'scaleY(1.33)',
