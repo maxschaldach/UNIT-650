@@ -106,7 +106,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        breathe: "breathe 4s ease-in-out infinite",
+        breathe: "breathe 6s ease-in-out infinite",
         'pulse-shadow': 'pulse-shadow 4s ease-in-out infinite',
         "fade-in": "fade-in 0.3s ease-out",
         "fade-out": "fade-out 0.3s ease-out",
