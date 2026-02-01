@@ -1,95 +1,43 @@
-import logo from "@/assets/logo.svg";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import logo from "@/assets/unit650-logo.png";
 
 const Index = () => {
-  const [isButtonHovered, setIsButtonHovered] = useState(false);
-  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center overflow-hidden pt-8" style={{ background: 'var(--gradient-radial)' }}>
+    <div className="fixed inset-0 bg-[#142318] p-8 md:p-12 lg:p-16">
+      {/* Logo - upper left */}
       <img 
         src={logo} 
-        alt="Logo" 
-        className="absolute top-8 w-10 h-auto md:w-10 lg:w-12" 
-        style={{ filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.4))' }}
+        alt="UNIT 650" 
+        className="h-6 md:h-8 lg:h-10 w-auto"
       />
-      <h1 
-        className="font-formula text-foreground text-7xl md:text-7xl lg:text-8xl font-black tracking-normal animate-fade-in px-4 text-center leading-[0.9] md:leading-normal max-w-[90%]"
-        style={{ filter: 'drop-shadow(0 0 6px rgba(255, 255, 255, 0.45))', transform: 'scaleY(1.33)', willChange: 'filter, transform' }}
-      >
-        Building for Freedom?
-      </h1>
       
-      <a 
-        href="https://www.linkedin.com/in/max-schaldach/"
-        target="_blank"
-        rel="noopener noreferrer"
-        onMouseEnter={() => setIsButtonHovered(true)}
-        onMouseLeave={() => setIsButtonHovered(false)}
-        className="mt-16 px-14 py-1 border border-white font-formula font-medium text-white text-sm md:text-sm cursor-pointer transition-transform duration-300 active:scale-95 animate-fade-in opacity-0"
-        style={{
-          borderRadius: '14px',
-          transform: `scale(${isButtonHovered ? 0.98 : 0.95}) scaleY(1.33) translateZ(0)`,
-          display: 'inline-block',
-          paddingTop: '0.4rem',
-          background: 'transparent',
-          boxShadow: '0 0 5px rgba(255, 255, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.3)',
-          animationDelay: '0.4s',
-          willChange: 'transform, opacity',
-          backfaceVisibility: 'hidden'
+      {/* Plus sign - upper right */}
+      <span 
+        className="absolute top-8 right-8 md:top-12 md:right-12 lg:top-16 lg:right-16 text-white font-formula font-light leading-none"
+        style={{ fontSize: 'calc(1.5rem * 5/6)', lineHeight: 1 }}
+      >
+        +
+      </span>
+      
+      {/* Responsive plus for different breakpoints */}
+      <style>{`
+        @media (min-width: 768px) {
+          .plus-sign { font-size: calc(2rem * 5/6) !important; }
+        }
+        @media (min-width: 1024px) {
+          .plus-sign { font-size: calc(2.5rem * 5/6) !important; }
+        }
+      `}</style>
+      
+      {/* Text - lower left */}
+      <p 
+        className="absolute bottom-8 left-8 md:bottom-12 md:left-12 lg:bottom-16 lg:left-16 text-white font-formula font-light text-sm md:text-base lg:text-lg max-w-[90vw] md:max-w-[60vw] lg:max-w-[50vw]"
+        style={{ 
+          textWrap: 'balance',
+          lineHeight: 1.4
         }}
       >
-        Get your first check
-      </a>
-      
-      <nav className="absolute bottom-12 flex gap-6 text-xs md:text-xs font-formula font-light">
-        <Link 
-          to="/" 
-          onMouseEnter={() => setHoveredLink('home')}
-          onMouseLeave={() => setHoveredLink(null)}
-          className="text-white opacity-100 hover:opacity-90 transition-all duration-300" 
-          style={{ transform: `scale(${hoveredLink === 'home' ? 1.03 : 1}) scaleY(1.4)`, display: 'inline-block' }}
-        >
-          Home
-        </Link>
-        <Link 
-          to="/about" 
-          onMouseEnter={() => setHoveredLink('about')}
-          onMouseLeave={() => setHoveredLink(null)}
-          className="text-white opacity-70 hover:opacity-90 transition-all duration-300" 
-          style={{ transform: `scale(${hoveredLink === 'about' ? 1.03 : 1}) scaleY(1.4)`, display: 'inline-block' }}
-        >
-          About
-        </Link>
-        <Link 
-          to="/thesis" 
-          onMouseEnter={() => setHoveredLink('thesis')}
-          onMouseLeave={() => setHoveredLink(null)}
-          className="text-white opacity-70 hover:opacity-90 transition-all duration-300" 
-          style={{ transform: `scale(${hoveredLink === 'thesis' ? 1.03 : 1}) scaleY(1.4)`, display: 'inline-block' }}
-        >
-          Thesis
-        </Link>
-        <Link 
-          to="/portfolio" 
-          onMouseEnter={() => setHoveredLink('portfolio')}
-          onMouseLeave={() => setHoveredLink(null)}
-          className="text-white opacity-70 hover:opacity-90 transition-all duration-300" 
-          style={{ transform: `scale(${hoveredLink === 'portfolio' ? 1.03 : 1}) scaleY(1.4)`, display: 'inline-block' }}
-        >
-          Portfolio
-        </Link>
-        <Link 
-          to="/team" 
-          onMouseEnter={() => setHoveredLink('team')}
-          onMouseLeave={() => setHoveredLink(null)}
-          className="text-white opacity-70 hover:opacity-90 transition-all duration-300" 
-          style={{ transform: `scale(${hoveredLink === 'team' ? 1.03 : 1}) scaleY(1.4)`, display: 'inline-block' }}
-        >
-          Team
-        </Link>
-      </nav>
+        Freedom is a function of our technological independence. UNIT 650 backs students, dropouts, and recent graduates building technologies critical to European and U.S. leadership in manufacturing, robotics, AI, space, and defense. We write idea-stage checks up to $100k.
+      </p>
     </div>
   );
 };
